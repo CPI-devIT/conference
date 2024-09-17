@@ -69,5 +69,9 @@
 		"tippy.js": "6.3.7",
 		"webpack": "latest",
 		"webpack-stream": "latest"
+	},
+	"dependencies": {
+		"graph-modal": "^1.0.7",
+		"graph-tabs": "^1.0.2"
 	}
 }
