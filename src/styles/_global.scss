@@ -62,6 +62,17 @@ body {
 
 .section {
 	padding: 120px 0;
+	background-color: var(--color-white);
+
+	&--under {
+		margin-top: -60px;
+		padding-top: 180px;
+	}
+
+	&--over {
+		position: relative;
+		z-index: 1;
+	}
 
 	&--radius {
 		border-radius: 60px;
