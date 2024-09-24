@@ -1,36 +1,40 @@
 <header class="header">
-<div class="container container__header">
+<div class="container header__container">
   <nav class="header__nav">
             <a class="header__logo logo " href="#" target="_blank">
-              <img class="header__logo" src="img/logos/conference-logo.png" alt="">
+              <picture>
+              <source srcset="img/logos/conference-logo.avif" type="image/avif">
+              <source srcset="img/logos/conference-logo.webp" type="image/webp">
+              <img class="header__logo" src="img/logos/conference-logo.png" alt="Первая Научно-Практическая Конференция По Экологии" width="332" height="55" loading="lazy">
+              </picture>
             </a>
 
 
             <ul class="header__partners">
               <li class="header__partner">
-                <a href="#" class="header__link">
-                  <img class="header__logo" src="img/logos/mp-logo.svg" alt="">
+                <a href="#">
+                  <img class="header__logo" src="img/logos/mp-logo.svg" alt="Министерство Просвещения Российской Федерации" >
                 </a>
               </li>
               <li class="header__partner">
                 <a href="#">
-                  <img class="header__logo" src="img/logos/cpi-logo.svg" alt="">
+                  <img class="header__logo" src="img/logos/cpi-logo.svg" alt="Центр Просветительских Инициатив">
                 </a>
               </li>
               <li class="header__partner">
                 <a href="#">
-                  <img class="header__logo" src="img/logos/eco-logo.svg" alt="">
+                  <img class="header__logo" src="img/logos/eco-logo.svg" alt="Российский Экологический Оператор">
                 </a>
               </li>
               <li class="header__partner">
                 <a href="#">
-                  <img class="header__logo" src="img/logos/mnvo-logo.svg" alt="">
+                  <img class="header__logo" src="img/logos/mnvo-logo.svg" alt="Министерство науки и высшего образования Российской Федерации">
                 </a>
               </li>
             </ul>
-              <div class="header__btn-list">
-              <button class="header__btn">Войти</button>
-              <button class="header__btn">Зарегистрироваться</button>
+              <div class="header__account">
+              <a class="header__btn button">Войти</a>
+              <a class="header__btn button">Зарегистрироваться</a>
               </div>
             <ul class="header__list burger-menu" id="burger-menu" data-menu>
                 <li class="header__items">

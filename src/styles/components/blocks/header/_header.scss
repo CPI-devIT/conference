@@ -1,95 +1,83 @@
 .header {
-	position: relative;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: 2;
+position: relative;
+left: 0;
+right: 0;
+top: 0;
+z-index: 2;
 
-	&--fixed {
-		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
-	}
-
-  &__nav,  &__partners {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-  }
-
-  &__btn-list {
-    display: none;
-    margin-left: auto;
-  }
-
-  &__btn {
-    border-radius: 100px;
-    padding: 18px 35px;
-    color: var(--color-white);
-    background-color: var(--color-green-400);
-    transition: color 0.3s, background-color 0.3s;
-
-    &:not(:last-child){
-      margin-right: 15px;
-    }
-
-    @media (any-hover: hover) {
-      &:hover{
-        color: var(--color-green-400);
-        background-color: var(--color-white);
-      }
-    }
-  }
-
-  &__link {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-green-400);
-    transition: color 0.3s;
-
-    @media (any-hover: hover) {
-      &:hover{
-        color: var(--color-white);
-      }
-    }
-  }
-
-  &__list{
-    display: flex;
-    justify-content: center;
-  }
-
-  &__items, &__item{
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-title), sans-serif;
-    gap:20px;
-  }
-
-  &__item{
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__text{
-    font-family: var(--font-default),sans-serif;
-    font-weight: 300;
-    color: var(--color-white);
-  }
+&__container{
+padding: 15px 50px;
+max-width: 1330px;
 }
 
-.container{
-  &__header{
-    padding: 15px 50px;
-    max-width: 1330px;
-  }
+&--fixed {
+position: fixed;
+transform: translateY(0);
+transition: transform 0.35s ease-out;
 }
 
-.burger-button {
-		z-index: 100;
-	}
+&__nav,
+&__partners {
+@include flex-alignment (60px, space-between,center,);
+}
 
-  .hidden {
-    display: none;
-  }
+&__account {
+display: none;
+margin-left: auto;
+}
+
+&__btn {
+background-color: var(--color-green-400);
+transition: color 0.3s, background-color 0.3s;
+
+&:not(:last-child){
+margin-right: 15px;
+}
+
+@media (any-hover: hover) {
+&:hover{
+color: var(--color-green-400);
+background-color: var(--color-white);
+}
+}
+}
+
+&__link {
+font-weight: 700;
+text-transform: uppercase;
+color: var(--color-green-400);
+transition: color 0.3s;
+
+@media (any-hover: hover) {
+&:hover{
+color: var(--color-white);
+}
+}
+}
+
+&__list{
+display: flex;
+justify-content: center;
+}
+
+&__items,
+&__item{
+@include flex-simple(20px, column);
+
+font-family: var(--font-title), sans-serif;
+}
+
+&__item{
+@include flex-simple(20px, column);
+}
+
+&__text{
+font-family: var(--font-default),sans-serif;
+font-weight: 300;
+color: var(--color-white);
+}
+}
+
+.hidden {
+display: none;
+}

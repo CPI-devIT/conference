@@ -5,7 +5,7 @@ export const burger = () => {
     const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
-    const headerButton = document.querySelector(".header__btn-list");
+    const headerButton = document.querySelector(".header__account");
     const headerPartner = document.querySelector(".header__partners");
     const headerBlock = document.querySelector(".header");
 
@@ -25,7 +25,7 @@ export const burger = () => {
        const showButton = () => {
         if (burgerButton.classList.contains('burger-button--active')) {
             headerPartner.classList.add('hidden');
-            headerButton.style.display = 'block';
+            headerButton.style.display = 'flex';
             headerBlock.style.background = 'var(--color-green-800)';
         } else {
             headerPartner.classList.remove('hidden');
