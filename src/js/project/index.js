@@ -1,0 +1,1 @@
+import './sliders/_news-slider.js';
