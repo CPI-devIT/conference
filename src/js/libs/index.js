@@ -7,6 +7,6 @@
 // import './_mixitup.js';
 // import './_modals.js';
 // import './_nouislider.js';
-// import './_tabs.js';
+import './_tabs.js';
 // import './_tippy.js';
 // import './_tippy.js';
