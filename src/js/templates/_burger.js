@@ -48,11 +48,11 @@ export const burger = () => {
         showButton();
     });
 
-    overlay.addEventListener('click', () => {
-        hideBurger();
-        checkClass();
-        showButton();
-    });
+    // overlay.addEventListener('click', () => {
+    //     hideBurger();
+    //     checkClass();
+    //     showButton();
+    // });
 
     menuLinks.forEach((link) => {
         link.addEventListener('click', () => {
