@@ -2,4 +2,37 @@
 	&__title {
 		@include title;
 	}
+
+	table {
+		width: 100%;
+		border-spacing: 0 10px;
+	}
+
+	tr {
+		padding: 24px 0;
+
+		&:not(:last-child) {
+			border-bottom: 2px solid var(--color-grey-300);
+		}
+	}
+
+	td {
+		vertical-align: top;
+		width: 37%;
+
+		&:nth-child(1) {
+			width: 150px;
+		}
+
+		// &:nth-child(2) {
+		// 	width: 300px;
+		// }
+
+		// &:nth-child(3) {
+		// }
+
+		&:nth-child(4) {
+			width: 80px;
+		}
+	}
 }
