@@ -1,21 +1,27 @@
 .burger-button {
-	--burger-width: 30px;
-	--burger-height: 30px;
+	--burger-width: 20px;
+	--burger-height: 20px;
 	--burger-line-height: 2px;
-	--burger-border-radius: 0;
-	--burger-color: var(--color-black);
+	--burger-border-radius: 10px;
+	--burger-color: var(--color-white);
 
 	position: relative;
+  z-index: 100;
+  border-radius: 100%;
+  padding: 30px;
 	width: var(--burger-width);
 	height: var(--burger-height);
 	color: var(--burger-color);
+  background-color: var(--color-green-400);
+
 
 	&::before,
 	&::after {
 		content: '';
 		position: absolute;
-		left: 0;
-		width: 100%;
+		left: 20px;
+    border-radius: 10px;
+		width: 20px;
 		height: var(--burger-line-height);
 		background-color: currentcolor;
 		transition:
@@ -24,22 +30,18 @@
 	}
 
 	&::before {
-		top: 0;
+		top: 20px;
 	}
 
 	&::after {
-		top: calc(100% - var(--burger-line-height));
-	}
-
-	@include mq(lg, min) {
-		display: none;
+		bottom: 20px;
 	}
 
 	&__line {
 		position: absolute;
-		left: 0;
+		left: 20px;
 		top: 50%;
-		width: 100%;
+		width: 20px;
 		height: var(--burger-line-height);
 		background-color: currentcolor;
 		transform: translateY(-50%);
@@ -64,6 +66,7 @@
 		}
 
 		.burger-button__line {
+      border-radius: 10px;
 			transform: scale(0);
 			transition: transform 0.3s ease-in-out;
 		}

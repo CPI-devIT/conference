@@ -9,12 +9,13 @@
 // import { spollers } from './_spollers.js';
 // import { stepper } from './_stepper.js';
 // import {type} from './_type.js';
+import {burger} from './_burger.js'
 
 // paralaxMouse();
 // parallaxScroll();
 // showPassword();
 // activeClass();
-// burger();
+burger();
 // showMore();
 // spollers();
 // stepper();
