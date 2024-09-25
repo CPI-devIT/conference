@@ -1,0 +1,25 @@
+.contacts {
+&__items {
+@include flex-alignment(78px,flex-start,top);
+
+padding: 83px 0 65px;
+font-weight: 600;
+font-size: 28px;
+line-height: 1.285;
+}
+
+&__item {
+max-width: 350px;
+}
+
+}
+
+.section--under {
+padding-top:120px;
+}
+
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
