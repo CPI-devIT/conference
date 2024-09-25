@@ -5,9 +5,9 @@ export const burger = () => {
     const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
-    const headerButton = document.querySelector(".header__account");
-    const headerPartner = document.querySelector(".header__partners");
-    const headerBlock = document.querySelector(".header");
+    const buttonsContainer = document.querySelector(".header__account");
+    const partner = document.querySelector(".header__partners");
+    const block = document.querySelector(".header");
 
 
     const checkClass = () => {
@@ -24,13 +24,13 @@ export const burger = () => {
 
        const showButton = () => {
         if (burgerButton.classList.contains('burger-button--active')) {
-            headerPartner.classList.add('hidden');
-            headerButton.style.display = 'flex';
-            headerBlock.style.background = 'var(--color-green-800)';
+            partner.classList.add('header__partners--hidden');
+            buttonsContainer.classList.add('header__account--active');
+            block.classList.add('header--active');
         } else {
-            headerPartner.classList.remove('hidden');
-            headerButton.style.display = 'none';
-            headerBlock.style.background = '';
+            partner.classList.remove('.header__partners--hidden');
+            buttonsContainer.classList.remove('header__account--active');
+            block.classList.remove('header--active');
         }
     };
 

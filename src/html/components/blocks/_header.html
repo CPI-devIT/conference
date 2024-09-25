@@ -33,13 +33,16 @@
               </li>
             </ul>
               <div class="header__account">
-              <a class="header__btn button">Войти</a>
-              <a class="header__btn button">Зарегистрироваться</a>
+              <a class="header__btn button" href="#">Войти</a>
+              <a class="header__btn button" href="#">Зарегистрироваться</a>
               </div>
+              <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="burger-menu" data-burger-button>
+              <span class="burger-button__line" aria-hidden></span>
+            </button>
             <ul class="header__list burger-menu" id="burger-menu" data-menu>
-                <li class="header__items">
-                    <ul class="header__items">
-                    <p class="header__text">Главная</p>
+                <li class="header__name">
+                    <span class="header__title">Главная</span>
+                    <ul class="header__subtitle">
                     <li>
                        <a class="header__link" href="#" data-menu-link>
                        о событии
@@ -67,9 +70,9 @@
                     </li>
                     </ul>
                 </li>
-                <li class="header_items">
-                    <ul class="header__item">
-                    <p class="header__text">Участникам</p>
+                <li class="header__name">
+                    <span class="header__title">Участникам</span>
+                    <ul class="header__subtitle">
                      <li>
                        <a class="header__link" href="#" data-menu-link>
                         форма участия
@@ -103,9 +106,9 @@
                     </li>
                     </ul>
                 </li>
-                <li class="header_items">
-                    <ul class="header__item">
-                    <p class="header__text">Материалы</p>
+                <li class="header__name">
+                    <span class="header__title">Материалы</span>
+                    <ul class="header__subtitle">
                     <li>
                        <a class="header__link" href="#" data-menu-link>
                         требования
@@ -134,9 +137,9 @@
                     </li>
                     </ul>
                 </li>
-                <li class="header_items">
-                    <ul class="header__item">
-                    <p class="header__text">Команда</p>
+                <li class="header__name">
+                    <span class="header__title">Команда</span>
+                     <ul class="header__subtitle">
                     <li>
                       <a class="header__link" href="#" data-menu-link>
                         оргкомитет
@@ -151,9 +154,6 @@
                     </ul>
                 </li>
             </ul>
-            <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="burger-menu" data-burger-button>
-                <span class="burger-button__line" aria-hidden></span>
-            </button>
         </nav>
 </div>
 </header>
