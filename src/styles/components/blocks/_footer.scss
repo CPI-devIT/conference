@@ -1,14 +1,13 @@
 .footer {
 @include bg-properties($size: cover);
 
-height: 370px;
+
 background-image: url("../img/bg/section-bg.jpg");
 
 &__bottom {
 @include flex-alignment(110px,start,center);
 
-display: flex;
-padding: 250px 2px 65px;
+padding: 260px 2px 65px;
 color: var(--color-white);
 }
 
