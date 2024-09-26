@@ -32,10 +32,36 @@ body {
 .button {
 	@include flex-alignment(0);
 
+	outline: 0;
 	border-radius: 100px;
 	padding: 18px 38px;
 	color: var(--color-white);
 	background-color: var(--color-green-800);
+	transition:
+		color 0.3s,
+		background-color 0.3s;
+
+	&:focus-visible {
+		box-shadow: 0 0 0 2px var(--color-green-800);
+		color: var(--color-black);
+		background-color: var(--color-grey-100);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-green-400);
+		}
+	}
+
+	&--light {
+		background-color: var(--color-green-400);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-green-800);
+			}
+		}
+	}
 }
 
 .sr-only {

@@ -1,0 +1,41 @@
+.tabs {
+	&__nav {
+		display: flex;
+		margin-bottom: 24px;
+		gap: 1px;
+	}
+
+	&__nav-btn {
+		&--active {
+			color: var(--color-black);
+			background-color: var(--color-grey-100);
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--color-black);
+					background-color: var(--color-grey-100);
+				}
+			}
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 2px var(--color-green-800);
+			color: var(--color-black);
+			background-color: var(--color-grey-100);
+		}
+	}
+
+	&__panel {
+		border-radius: 30px;
+		padding: 0 50px 12px;
+		background-color: var(--color-grey-100);
+	}
+
+	&__item {
+		padding: 24px 0;
+
+		&:not(:last-child) {
+			border-bottom: 2px solid var(--color-grey-300);
+		}
+	}
+}
