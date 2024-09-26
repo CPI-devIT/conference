@@ -1,3 +1,19 @@
 .footer {
-    
+@include bg-properties($size: cover);
+
+
+background-image: url("../img/bg/section-bg.jpg");
+
+&__bottom {
+@include flex-alignment(110px,start,center);
+
+padding: 260px 2px 65px;
+color: var(--color-white);
+}
+
+&__item {
+  width: 100%;
+  max-width: 200px;
+}
+
 }
