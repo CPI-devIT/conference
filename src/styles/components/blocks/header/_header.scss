@@ -1,91 +1,61 @@
 .header {
-position: relative;
-left: 0;
-right: 0;
-top: 0;
-z-index: 2;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2;
+	background-color: var(--color-green-800);
 
-&--active {
-background-color: var(--color-green-800);
-}
+	&--active {
+		background-color: var(--color-green-800);
+	}
 
-&__container{
-padding: 15px 50px;
-max-width: 1330px;
-}
+	&--fixed {
+		position: fixed;
+		transform: translateY(0);
+		transition: transform 0.35s ease-out;
+	}
 
-&--fixed {
-position: fixed;
-transform: translateY(0);
-transition: transform 0.35s ease-out;
-}
+	&__nav {
+		padding: 42px 0;
+		background-color: var(--color-green-800);
+	}
 
-&__nav,
-&__partners {
-@include flex-alignment (60px, space-between,center,);
-}
+	&__container {
+		@include flex-alignment(60px, space-between, center);
 
-&__account {
-display: none;
-}
+		max-width: 1360px;
+	}
 
-&__account--active {
-display: flex;
-margin-left: auto;
-}
+	&__partners {
+		@include flex-simple(50px);
 
-&__btn {
-background-color: var(--color-green-400);
-transition: color 0.3s, background-color 0.3s;
+		&--hidden {
+			display: none;
+		}
+	}
 
-&:not(:last-child){
-margin-right: 15px;
-}
+	&__link {
+		display: inline-block;
+		border-radius: 4px;
+		transition: box-shadow 0.3s;
 
-@media (any-hover: hover) {
-&:hover{
-color: var(--color-green-400);
-background-color: var(--color-white);
-}
-}
-}
+		&:focus-visible {
+			@include focus-visible;
+		}
+	}
 
-&__link {
-font-weight: 700;
-text-transform: uppercase;
-color: var(--color-green-400);
-transition: color 0.3s;
+	&__logo {
+		object-fit: contain;
+	}
 
-@media (any-hover: hover) {
-&:hover{
-color: var(--color-white);
-}
-}
-}
+	&__account {
+		display: none;
 
-&__list{
-display: flex;
-justify-content: center;
-}
+		&--active {
+			@include flex-simple(15px);
 
-&__name,
-&__subtitle{
-@include flex-simple(20px, column);
-
-font-family: var(--font-title), sans-serif;
-}
-
-&__item{
-@include flex-simple(20px, column);
-}
-
-&__title{
-font-family: var(--font-default),sans-serif;
-font-weight: 300;
-color: var(--color-white);
-}
-}
-
-.header__partners--hidden {
-display: none;
+			margin-left: auto;
+		}
+	}
 }
