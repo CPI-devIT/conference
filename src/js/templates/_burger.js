@@ -5,6 +5,10 @@ export const burger = () => {
     const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
+    const buttonsContainer = document.querySelector(".header__account");
+    const partner = document.querySelector(".header__partners");
+    const header = document.querySelector(".header");
+
 
     const checkClass = () => {
         if (burgerButton.classList.contains('burger-button--active')) {
@@ -22,12 +26,18 @@ export const burger = () => {
         burgerButton.classList.remove('burger-button--active');
         menu.classList.remove('burger-menu--active');
         overlay.classList.remove('overlay--active');
+        partner.classList.remove('header__partners--hidden');
+        buttonsContainer.classList.remove('header__account--active');
+        header.classList.remove('header--active');
     }
 
     burgerButton.addEventListener('click', () => {
         burgerButton.classList.toggle('burger-button--active');
         menu.classList.toggle('burger-menu--active');
         overlay.classList.toggle('overlay--active');
+        partner.classList.toggle('header__partners--hidden');
+        buttonsContainer.classList.toggle('header__account--active');
+        header.classList.toggle('header--active');
         checkClass();
     });
 
@@ -39,6 +49,7 @@ export const burger = () => {
     menuLinks.forEach((link) => {
         link.addEventListener('click', () => {
             hideBurger();
+            checkClass();
             enableScroll();
         });
     });

@@ -12,3 +12,8 @@
 	line-height: $lh;
 	color: $color;
 }
+
+@mixin focus-visible($shadow-color: var(--color-green-400)) {
+	outline: 0;
+	box-shadow: 0 0 0 2px $shadow-color;
+}

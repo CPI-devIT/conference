@@ -1,13 +1,61 @@
 .header {
 	position: relative;
-	top: 0;
-	right: 0;
 	left: 0;
+	right: 0;
+	top: 0;
 	z-index: 2;
+	background-color: var(--color-green-800);
+
+	&--active {
+		background-color: var(--color-green-800);
+	}
 
 	&--fixed {
 		position: fixed;
 		transform: translateY(0);
 		transition: transform 0.35s ease-out;
+	}
+
+	&__nav {
+		padding: 42px 0;
+		background-color: var(--color-green-800);
+	}
+
+	&__container {
+		@include flex-alignment(60px, space-between, center);
+
+		max-width: 1360px;
+	}
+
+	&__partners {
+		@include flex-simple(50px);
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-radius: 4px;
+		transition: box-shadow 0.3s;
+
+		&:focus-visible {
+			@include focus-visible;
+		}
+	}
+
+	&__logo {
+		object-fit: contain;
+	}
+
+	&__account {
+		display: none;
+
+		&--active {
+			@include flex-simple(15px);
+
+			margin-left: auto;
+		}
 	}
 }
