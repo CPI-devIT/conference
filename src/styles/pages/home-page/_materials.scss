@@ -1,0 +1,10 @@
+.materials {
+	&__title {
+		@include title(110px, 700, 60px, var(--color-green-800), 1);
+
+		text-transform: uppercase;
+	}
+}
+
+.spollers {
+}

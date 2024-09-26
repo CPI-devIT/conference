@@ -6,7 +6,7 @@
 // import { activeClass } from './_active-class.js';
 // import { showMore } from './_show-more.js';
 // import { showMore } from './_show-more.js';
-// import { spollers } from './_spollers.js';
+import { spollers } from './_spollers.js';
 // import { stepper } from './_stepper.js';
 // import {type} from './_type.js';
 import {burger} from './_burger.js'
@@ -17,6 +17,6 @@ import {burger} from './_burger.js'
 // activeClass();
 burger();
 // showMore();
-// spollers();
+spollers();
 // stepper();
 // type();
