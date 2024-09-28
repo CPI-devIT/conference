@@ -9,14 +9,11 @@
 
 	&__icon {
 		@include bg-properties(44px);
+		@include circle(80px, var(--color-green-200));
 
 		position: absolute;
 		right: 20px;
 		top: 20px;
-		border-radius: 50%;
-		width: 82px;
-		height: 82px;
-		background-color: var(--color-green-200);
 	}
 
 	&__title {

@@ -3,6 +3,9 @@
         <h2 class="materials__title">
             материалы
         </h2>
+        <h3 class="sr-only">
+            Ответы на часто задаваемые вопросы
+        </h3>
         <ul class="materials__spollers spollers" data-spollers="materials-spollers" data-one-spoller>
             <li class="spollers__item">
                 @include('../../components/cards/_spoller-card.html', {
@@ -20,6 +23,23 @@
                 @include('../../components/cards/_spoller-card.html', {
                 'title' : 'Согласие на публикацию',
                 'text' : ['Участие в мероприятии бесплатное. Для участия в мероприятии необходимо пройти регистрацию. После прохождения регистрации участникам направляются данные для входа в Личный кабинет.']
+                })
+            </li>
+        </ul>
+        <h3 class="materials__subtitle">
+            Шаблоны презентаций и докладов (pptx, pdf)
+        </h3>
+        <ul class="materials__downloads">
+            <li class="materials__download">
+                @include('../../components/_download-link-card.html', {
+                'text' : 'Скачать шаблон презентации в формате PDF',
+                'icon' : 'presentation'
+                })
+            </li>
+            <li class="materials__download">
+                @include('../../components/_download-link-card.html', {
+                'text' : 'Скачать шаблон презентации в формате PPTX',
+                'icon' : 'notepad'
                 })
             </li>
         </ul>

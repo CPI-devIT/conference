@@ -4,7 +4,24 @@
 
 		text-transform: uppercase;
 	}
-}
 
-.spollers {
+	&__spollers {
+		margin-bottom: 42px;
+	}
+
+	&__subtitle {
+		@include title(42px);
+
+		width: 100%;
+		max-width: 700px;
+	}
+
+	&__downloads {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__download {
+		flex-basis: 50%;
+	}
 }
