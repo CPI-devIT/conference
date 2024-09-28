@@ -14,11 +14,14 @@
 		right: 0;
 		bottom: 0;
 		z-index: 1;
-		width: 660px;
-		height: 660px;
+		height: 69vmin;
+
+		// width: 660px;
+		// height: 660px;
 		background-image: url('../img/hero/eye.png');
 		transform: translate(10%, 15%);
 		animation: jump 5s infinite linear;
+		aspect-ratio: 1 / 1;
 	}
 
 	&__container {
@@ -27,6 +30,9 @@
 
 	&__wrapper {
 		@include flex-alignment(0, center, flex-start, column);
+
+		position: relative;
+		z-index: 1;
 	}
 
 	&__title {
