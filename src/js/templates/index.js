@@ -9,6 +9,7 @@
 // import { spollers } from './_spollers.js';
 // import { stepper } from './_stepper.js';
 // import {type} from './_type.js';
+import {stickyHeader} from './_header-sticky.js'
 import {burger} from './_burger.js'
 
 // paralaxMouse();
@@ -16,6 +17,7 @@ import {burger} from './_burger.js'
 // showPassword();
 // activeClass();
 burger();
+stickyHeader();
 // showMore();
 // spollers();
 // stepper();
