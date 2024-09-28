@@ -17,3 +17,10 @@
 	outline: 0;
 	box-shadow: 0 0 0 2px $shadow-color;
 }
+
+@mixin circle($size: 80px, $bg: var(--color-white)) {
+	border-radius: 50%;
+	width: $size;
+	height: $size;
+	background-color: $bg;
+}

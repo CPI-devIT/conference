@@ -1,0 +1,32 @@
+.download-link {
+	@include flex-alignment(20px, space-between, center);
+
+	border-radius: 100px;
+	padding: 18px 22px 20px 55px;
+	background-color: var(--color-green-400);
+	transition:
+		background-color 0.3s,
+		box-shadow 0.3s;
+
+	&:focus-visible {
+		@include focus-visible(var(--color-green-800));
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-green-800);
+		}
+	}
+
+	&__text {
+		flex-basis: 50%;
+		color: var(--color-white);
+	}
+
+	&__icon {
+		@include bg-properties;
+		@include circle;
+
+		background-size: 40px;
+	}
+}
