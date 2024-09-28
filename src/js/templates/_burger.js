@@ -37,7 +37,7 @@ export const burger = () => {
         overlay.classList.toggle('overlay--active');
         partner.classList.toggle('header__partners--hidden');
         buttonsContainer.classList.toggle('header__account--active');
-        header.classList.toggle('header--fixed');
+        header.classList.add('header--fixed');
         checkClass();
     });
 

@@ -9,7 +9,7 @@ export const stickyHeader = () => {
         const heroHeight = hero.offsetHeight;
 
         const changeClasses = () => {
-            // if (!burgerMenu.classList.contains('burger-menu--active')) {
+            if (!burgerMenu.classList.contains('burger-menu--active')) {
                 const scrollDistance = window.scrollY;
 
                 if (scrollDistance > heroHeight) {
@@ -17,7 +17,7 @@ export const stickyHeader = () => {
                 } else {
                     header.classList.remove('header--fixed');
                 }
-            // }
+            }
         }
 
         changeClasses();
