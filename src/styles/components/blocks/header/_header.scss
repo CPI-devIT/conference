@@ -1,24 +1,24 @@
 .header {
-	position: relative;
+	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	z-index: 2;
-	background-color: var(--color-green-800);
-
-	&--active {
-		background-color: var(--color-green-800);
-	}
+	background-color: transparent;
+	transition: background-color 0.3s;
 
 	&--fixed {
 		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
+		background-color: var(--color-green-800);
+
+		.header__nav {
+			background-color: var(--color-green-800);
+		}
 	}
 
 	&__nav {
 		padding: 42px 0;
-		background-color: var(--color-green-800);
+		transition: background-color 0.3s;
 	}
 
 	&__container {
@@ -28,7 +28,7 @@
 	}
 
 	&__partners {
-		@include flex-simple(50px);
+		@include flex-alignment(50px, flex-start, center);
 
 		&--hidden {
 			display: none;
