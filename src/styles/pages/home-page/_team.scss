@@ -8,9 +8,8 @@ text-transform: uppercase;
 }
 
 &__subtitle {
-@include title;
+@include title(25px);
 
-margin-bottom: 25px;
 }
 
 &__items {
@@ -34,12 +33,12 @@ gap: 16px;
 }
 
 &__img {
-@include circle(250px,);
+@include circle(250px);
 
 margin-bottom: 25px;
 
 &--orgkom{
-@include circle(100px,);
+@include circle(100px);
 }
 }
 
