@@ -1,11 +1,11 @@
 .contacts {
   &__title {
-    @include title (0,700,60px,var(--color-green-800), 97%);
+    @include title (0,700,60px,var(--color-green-800), 1.0);
   }
 
 
-  &__items {
-    @include flex-alignment(78px,flex-start,top,column);
+  &__inner {
+    @include flex-alignment(78px,flex-start,flex-start,column);
 
     padding: 83px 0 65px;
     font-weight: 600;
@@ -13,18 +13,17 @@
     line-height: 1.3;
   }
 
-  &__item {
-    @include flex-simple(105px,row);
+  &__items {
+    @include flex-simple(105px);
   }
 
-  &__text {
+  &__item {
     max-width: 350px;
   }
 
   &__map{
   width: 100%;
-  height: 694px;
-  max-width: 1206px;
+  height: 50vh;
   }
 
 }
