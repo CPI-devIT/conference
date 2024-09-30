@@ -4,80 +4,77 @@
     <h3 class="team__subtitle">Приглашенные гости</h3>
     <ul class="team__items">
       <li class="team__item">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name">Евстигнеев Максим Игоревич</p>
-        <span class="team__position">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'img' : '1',
+        'alt' : 'Фото приглашенного гостя',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
       <li class="team__item">
         <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img" src="img/schteamedule/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name">Евстигнеев Максим Игоревич</p>
-        <span class="team__position">Должность может быть в несколько строк</span>
+          @include('../../components/cards/_team-card.html', {
+          'img' : '1',
+          'alt' : 'Фото приглашенного гостя',
+          'name' : 'Евстигнеев Максим Игоревич',
+          'position' : 'Должность может быть в несколько строк'
+          })
       </li>
       <li class="team__item">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name">Евстигнеев Максим Игоревич</p>
-        <span class="team__position">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'img' : '1',
+        'alt' : 'Фото приглашенного гостя',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
       <li class="team__item">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name">Евстигнеев Максим Игоревич</p>
-        <span class="team__position">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'img' : '1',
+        'alt' : 'Фото приглашенного гостя',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
     </ul>
 
     <h3 class="team__subtitle">Оргкомитет</h3>
     <ul class="team__items team__items--orgkom">
       <li class="team__item team__item--orgkom">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img team__img--orgkom" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name team__name--orgkom">Евстигнеев Максим Игоревич</p>
-        <span class="team__position team__position--orgkom">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'class' : "team-card—-orgkom",
+        'img' : '1',
+        'alt' : 'Фото оргкомитета',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
       <li class="team__item  team__item--orgkom">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img team__img--orgkom" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name team__name--orgkom">Евстигнеев Максим Игоревич</p>
-        <span class="team__position team__position--orgkom">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'class' : "team-card—-orgkom",
+        'img' : '1',
+        'alt' : 'Фото оргкомитета',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
       <li class="team__item  team__item--orgkom">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img team__img--orgkom" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name team__name--orgkom">Евстигнеев Максим Игоревич</p>
-        <span class="team__position team__position--orgkom">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'class' : "team-card—-orgkom",
+        'img' : '1',
+        'alt' : 'Фото оргкомитета',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
       <li class="team__item  team__item--orgkom">
-        <picture>
-          <source srcset="img/team/1.avif" type="image/avif">
-          <source srcset="img/team/1.webp" type="image/webp">
-          <img class="team__img team__img--orgkom" src="img/team/1.jpg" alt="Фотография приглашенного гостя" loading="lazy">
-        </picture>
-        <p class="team__name team__name--orgkom">Евстигнеев Максим Игоревич</p>
-        <span class="team__position team__position--orgkom">Должность может быть в несколько строк</span>
+        @include('../../components/cards/_team-card.html', {
+        'class' : "team-card—-orgkom",
+        'img' : '1',
+        'alt' : 'Фото оргкомитета',
+        'name' : 'Евстигнеев Максим Игоревич',
+        'position' : 'Должность может быть в несколько строк'
+        })
       </li>
     </ul>
   </div>

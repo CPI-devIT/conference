@@ -9,7 +9,6 @@ text-transform: uppercase;
 
 &__subtitle {
 @include title(25px);
-
 }
 
 &__items {
@@ -30,36 +29,5 @@ gap: 16px;
     padding: 48px 45px;
     background-color: var(--color-white);
   }
-}
-
-&__img {
-@include circle(250px);
-
-margin-bottom: 25px;
-
-&--orgkom{
-@include circle(100px);
-}
-}
-
-&__name {
-margin-bottom: 15px;
-font-weight: 300;
-font-size: 24px;
-line-height: 1.25;
-
-&--orgkom{
-max-width: 135px;
-}
-}
-
-&__position {
-font-weight: 400;
-font-size: 18px;
-line-height: 1.3;
-}
-
-&--orgkom{
-max-width: 212px;
 }
 }
