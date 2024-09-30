@@ -1,0 +1,34 @@
+.team-card {
+&—-orgkom {
+.team-card__img {
+@include circle(100px);
+}
+
+.team-card__name {
+max-width: 135px;
+}
+
+.team-card__position {
+max-width: 212px;
+}
+}
+
+&__img {
+@include circle(250px);
+
+margin-bottom: 25px;
+}
+
+&__name {
+margin-bottom: 15px;
+font-weight: 300;
+font-size: 24px;
+line-height: 1.25;
+}
+
+&__position {
+font-weight: 400;
+font-size: 18px;
+line-height: 1.3;
+}
+}
