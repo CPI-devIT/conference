@@ -1,4 +1,6 @@
 .programm {
+  z-index: unset;
+
   	&__title {
 		@include title;
 	}
