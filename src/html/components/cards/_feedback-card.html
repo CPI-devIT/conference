@@ -1,0 +1,13 @@
+<article class="feedbacks-card">
+  <div class="feedbacks-card__inner">
+  <p class="feedbacks-card__name ">@name</p>
+  <span class="feedbacks-card__review">@review</span>
+  </div>
+  @if(typeof img !== 'undefined' && img) {
+  <picture>
+    <source srcset="img/review/@img.avif" type="image/avif">
+    <source srcset="img/review/@img.webp" type="image/webp">
+    <img class="feedbacks-card__img " src="img/review/@img.jpg" alt="@alt" loading="lazy" >
+  </picture>
+}
+</article>
