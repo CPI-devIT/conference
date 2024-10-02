@@ -1,6 +1,6 @@
-// import GraphModal from 'graph-modal';
+import GraphModal from 'graph-modal';
 
-// new GraphModal('modal');
+new GraphModal('success');
 
 // * Код к модальному окну для "спасибо"
 // if (document.querySelector('.modal-thank')) {
@@ -10,5 +10,5 @@
 //         new GraphModal('modal').open('modal-thank');
 //     });
 
-//     // btnThank.click();
+//     btnThank.click();
 // }
