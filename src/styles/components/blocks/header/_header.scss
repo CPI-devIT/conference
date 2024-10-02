@@ -4,12 +4,33 @@
 	right: 0;
 	top: 0;
 	z-index: 2;
-	background-color: transparent;
-	transition: background-color 0.3s;
+
+	&::before {
+		@include bg-properties;
+
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url('../img/bg/section-bg.jpg');
+		background-position: top center;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
 
 	&--fixed {
 		position: fixed;
-		background-color: var(--color-green-800);
+
+		&::before {
+			opacity: 1;
+		}
+
+		.header__nav {
+			position: relative;
+		}
+	}
+
+	&--burger {
+		position: fixed;
 
 		.header__nav {
 			background-color: var(--color-green-800);

@@ -29,6 +29,7 @@ export const burger = () => {
         partner.classList.remove('header__partners--hidden');
         buttonsContainer.classList.remove('header__account--active');
         header.classList.remove('header--fixed');
+        header.classList.remove('header--burger');
     }
 
     burgerButton.addEventListener('click', () => {
@@ -37,7 +38,8 @@ export const burger = () => {
         overlay.classList.toggle('overlay--active');
         partner.classList.toggle('header__partners--hidden');
         buttonsContainer.classList.toggle('header__account--active');
-        header.classList.add('header--fixed');
+        header.classList.toggle('header--burger');
+        header.classList.remove('header--fixed');
         checkClass();
     });
 
