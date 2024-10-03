@@ -11,8 +11,10 @@ async function initMap() {
         '@yandex/ymaps3-controls@0.0.1',
     );
 
+    // + YMapControls, YMapScaleControl
     const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapControls, YMapScaleControl } = ymaps3;
-    const { YMapDefaultMarker, YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
+    // YMapZoomControl
+    const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
 
     // создание карты
     const map = new YMap(
@@ -29,11 +31,11 @@ async function initMap() {
 
 
     // Добавление масштаба
-    const controls = new YMapControls({ position: 'bottom left' }, [new YMapScaleControl({})]);
-    map.addChild(controls);
+    // const controls = new YMapControls({ position: 'bottom left' }, [new YMapScaleControl({})]);
+    // map.addChild(controls);
 
     // Добавление кнопок + и -
-    map.addChild(new YMapControls({ position: 'right' }).addChild(new YMapZoomControl({})));
+    // map.addChild(new YMapControls({ position: 'right' }).addChild(new YMapZoomControl({})));
 
 
     // Настройка маркера
