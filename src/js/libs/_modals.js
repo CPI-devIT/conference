@@ -1,14 +1,12 @@
 import GraphModal from 'graph-modal';
 
-new GraphModal('success');
+const modalThank = document.querySelector('[data-graph-target="modal-thank"]');
+const buttonThank = document.querySelector('[data-graph-path="modal-thank"]');
 
-// * Код к модальному окну для "спасибо"
-// if (document.querySelector('.modal-thank')) {
-//     const btnThank = document.querySelector('.modal-thank');
+if (modalThank && buttonThank) {
+    buttonThank.addEventListener('click', () => {
+        new GraphModal('modal').open('modal-thank');
+    });
 
-//     btnThank.addEventListener('click', () => {
-//         new GraphModal('modal').open('modal-thank');
-//     });
-
-//     btnThank.click();
-// }
+    //buttonThank.click();
+}

@@ -1,51 +1,51 @@
 .form {
+	@include flex-simple(36px, column);
+
 	&__item {
-		width: 100%;
-		max-width: 400px;
-
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-	}
-
-	&__password {
 		position: relative;
 		width: 100%;
 	}
 
-	&__field {
-		border: 1px solid var(--color-black);
-		width: 100%;
+	&__label {
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		color: var(--color-grey-200);
+		transform: translateY(100%);
+		transition: bottom 0.3s;
 	}
 
-	&__show {
-		position: absolute;
-		right: 10px;
-		top: 50%;
-		width: 24px;
-		height: 24px;
-		background-image: url('../img/icons/eye.svg');
-		transform: translateY(-50%);
+	&__field {
+		outline: 0;
+		border-bottom: 1px solid var(--color-grey-200);
+		padding-bottom: 10px;
+		width: 100%;
+		transition:
+			border-bottom-color 0.3s,
+			color 0.3s;
 
-		@include bg-properties(contain);
-
-		&::before {
-			content: '';
-			position: absolute;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			width: 2px;
-			background-color: var(--color-black);
-			opacity: 0;
-			transform: rotate(45deg);
-			transition: opacity 0.3s;
+		&--error {
+			border-bottom-color: var(--color-red-100);
+			color: var(--color-red-100);
 		}
 
-		&--active {
-			&::before {
-				opacity: 0.4;
-			}
+		&::placeholder {
+			color: transparent;
 		}
+
+		&:focus {
+			border-bottom-color: var(--color-green-200);
+		}
+
+		&:focus + .form__label,
+		&:valid + .form__label,
+		&:not(:placeholder-shown) + .form__label {
+			bottom: -3px;
+			font-size: 14px;
+		}
+	}
+
+	.just-validate-error-label {
+		display: none;
 	}
 }

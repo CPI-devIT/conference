@@ -1,32 +1,46 @@
-// import JustValidate from "just-validate";
+import JustValidate from "just-validate";
 
-// Если несколько форм
-// const forms = document.querySelectorAll('.form')
-// forms.forEach((form) => {
-//     const formValidation = new JustValidate(form)
+const buttonSubmit = document.querySelector('.registration__button');
+const form = document.querySelector('.registration__form')
 
-//     formValidation.addField('input[type="email"]', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Поле должно быть заполнено',
-//         },
-//         {
-//             rule: 'email',
-//             errorMessage: 'Введите корректный email',
-//         },
-//     ]);
-// })
+if (buttonSubmit && form) {
+    const validation = new JustValidate('.registration__form', {
+        validateBeforeSubmitting: true,
+        errorFieldCssClass: 'form__field--error',
+    });
 
-// Если одна форма
-// const validation = new JustValidate('.test');
 
-// validation.addField('input[type="email"]', [
-//     {
-//         rule: 'required',
-//         errorMessage: 'Поле должно быть заполнено',
-//     },
-//     {
-//         rule: 'email',
-//         errorMessage: 'Введите корректный email',
-//     },
-// ]);
+    validation.addField('input[data-validate="name"]', [
+        {
+            rule: 'required',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+        },
+    ]);
+
+    validation.addField('input[type="email"]', [
+        {
+            rule: 'email',
+        },
+        {
+            rule: 'required',
+        },
+    ]);
+
+    validation.onValidate(({
+        isValid,
+        isSubmitted,
+        fields,
+        groups,
+    }) => {
+
+        if (isValid) {
+            buttonSubmit.removeAttribute('disabled');
+        } else {
+            buttonSubmit.setAttribute('disabled', 'true');
+        }
+    });
+}
+
