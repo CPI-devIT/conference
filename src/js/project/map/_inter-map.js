@@ -1,33 +1,63 @@
-let center = [55.758412068983525, 37.65080999999997];
+import * as ymaps3 from 'ymaps3';
+import styles from './_styles.json';
 
-function init() {
-    let map = new ymaps.Map("map", {
-        center: center,
-        zoom: 15
-    });
+let center = [37.65080999999997, 55.758412068983525];
 
-    let placemark = new ymaps.Placemark(center, {
-        hintContent: "Подсосенский переулок, 5стр1"
-    }, {
+async function initMap() {
+    await ymaps3.ready;
+    await ymaps3.import.registerCdn(
+        'https://cdn.jsdelivr.net/npm/{package}',
+        '@yandex/ymaps3-default-ui-theme@0.0.2',
+        '@yandex/ymaps3-controls@0.0.1',
+    );
 
-    });
+    const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapControls, YMapScaleControl } = ymaps3;
+    const { YMapDefaultMarker, YMapZoomControl } = await ymaps3.import('@yandex/ymaps3-default-ui-theme');
 
+    // создание карты
+    const map = new YMap(
+        document.querySelector('.contacts__map'),
+        {
+            location: {
+                center,
+                zoom: 15
+            },
+        }
+    );
+
+    map.addChild(new YMapDefaultFeaturesLayer({}))
+
+
+    // Добавление масштаба
+    const controls = new YMapControls({ position: 'bottom left' }, [new YMapScaleControl({})]);
+    map.addChild(controls);
+
+    // Добавление кнопок + и -
+    map.addChild(new YMapControls({ position: 'right' }).addChild(new YMapZoomControl({})));
+
+
+    // Настройка маркера
+    // Документация: https://yandex.ru/dev/jsapi30/doc/ru/ref/packages/markers/
+    // Пример: https://yandex.ru/dev/jsapi30/doc/ru/examples/cases/create-default-marker
+    const marker = new YMapDefaultMarker(
+        {
+            coordinates: center, 
+            title: 'Подсосенский переулок, 5стр1',
+            color: 'green',
+            size: 'normal',
+            iconName: 'fallback',
+        },
+    );
+
+    map.addChild(marker);
+
+    // Карта с кастомными стилями
     map.addChild(new YMapDefaultSchemeLayer({
         customization: styles
     }));
 
-    
+    // Карта с обычными стилями
+    // map.addChild(new YMapDefaultSchemeLayer());
+};
 
-    map.controls.remove('geolocationControl'); // удаляем геолокацию
-    map.controls.remove('searchControl'); // удаляем поиск
-    map.controls.remove('trafficControl'); // удаляем контроль трафика
-    map.controls.remove('typeSelector'); // удаляем тип
-    map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-    map.controls.remove('rulerControl'); // удаляем контрол правил
-    // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-    map.geoObjects.add(placemark);
-
-}
-
-ymaps.ready(init);
+initMap();
