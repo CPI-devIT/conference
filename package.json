@@ -73,6 +73,7 @@
 	"dependencies": {
 		"graph-modal": "^1.0.7",
 		"graph-tabs": "^1.0.2",
+		"just-validate": "^4.3.0",
 		"swiper": "^11.1.14"
 	}
 }

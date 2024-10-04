@@ -1,36 +1,48 @@
 .contacts {
-  &__title {
-    @include title (0,700,60px,var(--color-green-800), 1.0);
-  }
+	&__title {
+		@include title(0, 700, 60px, var(--color-green-800), 1);
+	}
 
+	&__inner {
+		@include flex-alignment(78px, flex-start, flex-start, column);
 
-  &__inner {
-    @include flex-alignment(78px,flex-start,flex-start,column);
+		padding: 83px 0 65px;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 1.3;
+	}
 
-    padding: 83px 0 65px;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 1.3;
-  }
+	&__info {
+		@include flex-simple(105px);
+	}
 
-  &__items {
-    @include flex-simple(105px);
-  }
+	&__column {
+		max-width: 350px;
+	}
 
-  &__item {
-    max-width: 350px;
-  }
+	&__link {
+		border-radius: 4px;
+		transition:
+			color 0.3s,
+			box-shadow 0.3s;
 
-  &__map{
-  width: 100%;
-  height: 50vh;
-  }
+		&:focus-visible {
+			@include focus-visible;
+		}
 
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-green-800);
+			}
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 50vh;
+	}
 }
 
-
-
-[class*="copyrights-pane"] {
-  display: none !important;
-}
-
+// [class*='copyrights-pane'] {
+// 	display: none !important;
+// }
