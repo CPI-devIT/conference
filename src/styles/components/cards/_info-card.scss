@@ -7,6 +7,18 @@
 	min-height: 283px;
 	background-color: var(--color-grey-100);
 
+  &--members{
+    padding: 102px 150px 20px 56px;
+
+    .info-card__title{
+      @include title(22px,600,24px,var(--color-black),1.2);
+    }
+
+    .info-card__text {
+      font-size: 18px;
+    }
+  }
+
 	&__icon {
 		@include bg-properties(44px);
 		@include circle(80px, var(--color-green-200));

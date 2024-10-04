@@ -1,0 +1,18 @@
+.date-card{
+&__title {
+@include title(15px,600,40px,var(--color-black),1.1)
+}
+
+  &__text{
+margin-top: 15px;
+width: 100%;
+max-width: 205px;
+
+p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+    }
+}
+
+}

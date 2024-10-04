@@ -1,0 +1,104 @@
+<section class="members section section--radius section--over section--under">
+<div class="container">
+  <h2 class="members__title">
+    участникам
+  </h2>
+  <h3 class="members__subtitle">
+    Для участия в мероприятии необходимо пройти регистрацию. Участие бесплатное.
+  </h3>
+  <h4 class="members__caption">
+    Формы участия
+  </h4>
+  <ul class="members__items">
+    <li class="members__item">
+      @include('../../components/cards/_info-card.html', {
+      'tag' : 'h5',
+      'class' : 'info-card--members',
+      'title' : 'Участие без доклада',
+      'text' : ['Возможно очно и дистанционно'],
+      'icon' : 'presentation',
+      })
+    </li>
+    <li class="members__item">
+      @include('../../components/cards/_info-card.html', {
+      'tag' : 'h5',
+      'class' : 'info-card--members',
+      'title' : 'Участие с устным докладом',
+      'text' : ['Возможно очно и дистанционно'],
+      'icon' : 'megaphone',
+      })
+    </li>
+    <li class="members__item">
+      @include('../../components/cards/_info-card.html', {
+      'tag' : 'h5',
+      'class' : 'info-card--members',
+      'title' : 'Статья в сборник',
+      'text' : ['Возможно только дистанционно'],
+      'icon' : 'notepad',
+      })
+    </li>
+  </ul>
+
+  <h4 class="members__caption">
+    Правила подачи заявки на доклад:
+  </h4>
+  <ul class="members__stage-items">
+    <li class="members__stage-item">
+      <h5 class="members__stage-title">1 этап</h5>
+      <div class="members__stage-text ">
+        <p class="members__stage-text">Необходимо представить аннотацию доклада –
+        100-200 слов:</p>
+        <ul class="members__stage-text members__stage-text--list">
+        <li>Аннотация должна быть представлена на русском языке.</li>
+        <li>Аннотация должна содержать название доклада, краткое описание целей научной работы, результаты (предполагаемые результаты) работы.</li>
+         <li>В аннотацию не включаются таблицы, иллюстрации, список используемой  литературы, сноски, ссылки.</li>
+          <li>Заявляемая аннотация должна быть отнесена к одному из направлений технической программы (выбрать при регистрации).</li>
+        </ul>
+      </div>
+    </li>
+    <li class="members__stage-item">
+      <h5 class="members__stage-title">2 этап</h5>
+      <div class="members__stage-text">
+        <p>
+        Подача полных тезисов. Авторам, получившим подтверждение о соответствии темы доклада тематикам конференции
+        (информация будет направлена докладчикам), необходимо будет направить полные тезисы докладов, оформленные  в
+        соответствии с требованиями, указанными в шаблоне. Все материалы конференции будут опубликованы в Сборниках
+        докладов с присвоением соответствующих библиотечных индексов (УДК, ББК) и международного стандартного книжного
+        номера (ISBN).
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="members__date-items">
+    <li class="members__date-item">
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-03-11',
+      'date' : '11.03',
+      'text' : 'Открытие регистрации и приёма аннотаций',
+      })
+    </li>
+    <li class="members__date-item">
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-05-27',
+      'date' : '27.05',
+      'text' : 'Окончание приёма кратких аннотаций докладов',
+      })
+    </li>
+    <li class="members__date-item">
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-06-28',
+      'date' : '28.06',
+      'text' : 'Оповещение авторов о соответствии темы доклада',
+      })
+    </li>
+    <li class="members__date-item">
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-08-12',
+      'date' : '12.08',
+      'text' : 'Окончание приёма полных тезисов докладов',
+      })
+    </li>
+  </ul>
+</div>
+</section>
