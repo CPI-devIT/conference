@@ -12,7 +12,7 @@
   <ul class="members__items">
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
-      'teg' : 'h4',
+      'tag' : 'h5',
       'class' : 'info-card--members',
       'title' : 'Участие без доклада',
       'text' : ['Возможно очно и дистанционно'],
@@ -21,7 +21,7 @@
     </li>
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
-      'teg' : 'h4',
+      'tag' : 'h5',
       'class' : 'info-card--members',
       'title' : 'Участие с устным докладом',
       'text' : ['Возможно очно и дистанционно'],
@@ -30,7 +30,7 @@
     </li>
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
-      'teg' : 'h4',
+      'tag' : 'h5',
       'class' : 'info-card--members',
       'title' : 'Статья в сборник',
       'text' : ['Возможно только дистанционно'],
@@ -46,9 +46,9 @@
     <li class="members__stage-item">
       <h5 class="members__stage-title">1 этап</h5>
       <div class="members__stage-text ">
+        <p class="members__stage-text">Необходимо представить аннотацию доклада –
+        100-200 слов:</p>
         <ul class="members__stage-text members__stage-text--list">
-        Необходимо представить аннотацию доклада –
-        100-200 слов:
         <li>Аннотация должна быть представлена на русском языке.</li>
         <li>Аннотация должна содержать название доклада, краткое описание целей научной работы, результаты (предполагаемые результаты) работы.</li>
          <li>В аннотацию не включаются таблицы, иллюстрации, список используемой  литературы, сноски, ссылки.</li>
@@ -72,36 +72,32 @@
 
   <ul class="members__date-items">
     <li class="members__date-item">
-      <time class="members__date-title" datetime="2024-03-11">11.03</time>
-      <div class="members__date-text">
-        <p>
-        Открытие регистрации и приёма аннотаций
-        </p>
-      </div>
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-03-11',
+      'date' : '11.03',
+      'text' : 'Открытие регистрации и приёма аннотаций',
+      })
     </li>
     <li class="members__date-item">
-      <time class="members__date-title" datetime="2024-05-27">27.05</time>
-      <div class="members__date-text">
-        <p>
-        Окончание приёма кратких аннотаций докладов
-        </p>
-      </div>
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-05-27',
+      'date' : '27.05',
+      'text' : 'Окончание приёма кратких аннотаций докладов',
+      })
     </li>
     <li class="members__date-item">
-      <time class="members__date-title" datetime="2024-06-28">28.06</time>
-      <div class="members__date-text">
-        <p>
-        Оповещение авторов о соответствии темы доклада
-        </p>
-      </div>
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-06-28',
+      'date' : '28.06',
+      'text' : 'Оповещение авторов о соответствии темы доклада',
+      })
     </li>
     <li class="members__date-item">
-      <time class="members__date-title" datetime="2024-08-12">12.08</time>
-      <div class="members__date-text">
-        <p>
-        Окончание приёма полных тезисов докладов
-        </p>
-      </div>
+      @include('../../components/cards/_date-card.html', {
+      'datetime' : '2024-08-12',
+      'date' : '12.08',
+      'text' : 'Окончание приёма полных тезисов докладов',
+      })
     </li>
   </ul>
 </div>

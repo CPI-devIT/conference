@@ -53,24 +53,7 @@ background-color: var(--color-grey-100);
     }
 }
 
-
 &__date-items{
 @include flex-alignment(95px, space-between,flex-start);
 }
-
-&__date-text{
-width: 100%;
-max-width: 205px;
-
-p {
-			&:not(:last-child) {
-				margin-bottom: 12px;
-			}
-    }
-}
-
-&__date-title {
-@include title(15px,600,40px,var(--color-black),1.1)
-}
-
 }
