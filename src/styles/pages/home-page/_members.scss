@@ -25,8 +25,7 @@ margin-bottom: 120px;
 }
 
 &__stage-items {
-@include flex-simple(0);
-
+display: flex;
 margin-bottom: 100px;
 }
 
@@ -42,6 +41,18 @@ background-color: var(--color-grey-100);
 @include title(33px,600,40px,var(--color-green-800),1.1)
 }
 
+&__stage-text {
+  &--list {
+    list-style: inside;
+  }
+
+  p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+    }
+}
+
 
 &__date-items{
 @include flex-alignment(95px, space-between,flex-start);
@@ -50,6 +61,12 @@ background-color: var(--color-grey-100);
 &__date-text{
 width: 100%;
 max-width: 205px;
+
+p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+    }
 }
 
 &__date-title {

@@ -2,7 +2,7 @@
 <article class="info-card @class">
     <span class="info-card__icon" style="background-image: url('img/icons/@icon.svg');" aria-hidden> </span>
     <div class="info-card__content">
-        <h3 class="info-card__title">@title</h3>
+        <@teg class="info-card__title">@title</@teg>
         <div class="info-card__text">
             @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
         </div>

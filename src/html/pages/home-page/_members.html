@@ -6,12 +6,13 @@
   <h3 class="members__subtitle">
     Для участия в мероприятии необходимо пройти регистрацию. Участие бесплатное.
   </h3>
-  <h3 class="members__caption">
+  <h4 class="members__caption">
     Формы участия
-  </h3>
+  </h4>
   <ul class="members__items">
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
+      'teg' : 'h4',
       'class' : 'info-card--members',
       'title' : 'Участие без доклада',
       'text' : ['Возможно очно и дистанционно'],
@@ -20,6 +21,7 @@
     </li>
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
+      'teg' : 'h4',
       'class' : 'info-card--members',
       'title' : 'Участие с устным докладом',
       'text' : ['Возможно очно и дистанционно'],
@@ -28,6 +30,7 @@
     </li>
     <li class="members__item">
       @include('../../components/cards/_info-card.html', {
+      'teg' : 'h4',
       'class' : 'info-card--members',
       'title' : 'Статья в сборник',
       'text' : ['Возможно только дистанционно'],
@@ -36,58 +39,69 @@
     </li>
   </ul>
 
-  <h3 class="members__caption">
+  <h4 class="members__caption">
     Правила подачи заявки на доклад:
-  </h3>
+  </h4>
   <ul class="members__stage-items">
     <li class="members__stage-item">
-      <p class="members__stage-title">1 этап</p>
-      <span class="members__stage-text">
+      <h5 class="members__stage-title">1 этап</h5>
+      <div class="members__stage-text ">
+        <ul class="members__stage-text members__stage-text--list">
         Необходимо представить аннотацию доклада –
-        100-200 слов:<br>
-        <br>
-        • Аннотация должна быть представлена на русском языке.<br>
-        • Аннотация должна содержать название доклада, краткое описание целей научной работы, результаты (предполагаемые результаты) работы.<br>
-        • В аннотацию не включаются таблицы, иллюстрации, список используемой          литературы, сноски, ссылки.<br>
-        • Заявляемая аннотация должна быть отнесена к одному из направлений технической программы (выбрать при регистрации).<br>
-      </span>
+        100-200 слов:
+        <li>Аннотация должна быть представлена на русском языке.</li>
+        <li>Аннотация должна содержать название доклада, краткое описание целей научной работы, результаты (предполагаемые результаты) работы.</li>
+         <li>В аннотацию не включаются таблицы, иллюстрации, список используемой  литературы, сноски, ссылки.</li>
+          <li>Заявляемая аннотация должна быть отнесена к одному из направлений технической программы (выбрать при регистрации).</li>
+        </ul>
+      </div>
     </li>
     <li class="members__stage-item">
-      <p class="members__stage-title">2 этап</p>
-      <span class="members__stage-text">
+      <h5 class="members__stage-title">2 этап</h5>
+      <div class="members__stage-text">
+        <p>
         Подача полных тезисов. Авторам, получившим подтверждение о соответствии темы доклада тематикам конференции
         (информация будет направлена докладчикам), необходимо будет направить полные тезисы докладов, оформленные  в
         соответствии с требованиями, указанными в шаблоне. Все материалы конференции будут опубликованы в Сборниках
         докладов с присвоением соответствующих библиотечных индексов (УДК, ББК) и международного стандартного книжного
         номера (ISBN).
-      </span>
+        </p>
+      </div>
     </li>
   </ul>
 
   <ul class="members__date-items">
     <li class="members__date-item">
-      <p class="members__date-title">11.03</p>
-      <span class="members__date-text">
+      <time class="members__date-title" datetime="2024-03-11">11.03</time>
+      <div class="members__date-text">
+        <p>
         Открытие регистрации и приёма аннотаций
-      </span>
+        </p>
+      </div>
     </li>
     <li class="members__date-item">
-      <p class="members__date-title">27.05</p>
-      <span class="members__date-text">
+      <time class="members__date-title" datetime="2024-05-27">27.05</time>
+      <div class="members__date-text">
+        <p>
         Окончание приёма кратких аннотаций докладов
-      </span>
+        </p>
+      </div>
     </li>
     <li class="members__date-item">
-      <p class="members__date-title">28.06</p>
-      <span class="members__date-text">
+      <time class="members__date-title" datetime="2024-06-28">28.06</time>
+      <div class="members__date-text">
+        <p>
         Оповещение авторов о соответствии темы доклада
-      </span>
+        </p>
+      </div>
     </li>
     <li class="members__date-item">
-      <p class="members__date-title">12.08</p>
-      <span class="members__date-text">
+      <time class="members__date-title" datetime="2024-08-12">12.08</time>
+      <div class="members__date-text">
+        <p>
         Окончание приёма полных тезисов докладов
-      </span>
+        </p>
+      </div>
     </li>
   </ul>
 </div>
