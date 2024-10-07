@@ -1,0 +1,9 @@
+.headbg {
+@include bg-properties;
+
+position: relative;
+display: flex;
+padding: 150px 0;
+height: var(--vh);
+background-image: url('../img/bg/section-bg.jpg');
+}
