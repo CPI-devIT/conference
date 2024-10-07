@@ -7,7 +7,7 @@ background-image: url("../img/bg/section-bg.jpg");
 &__bottom {
 @include flex-alignment(110px,start,center);
 
-padding: 260px 2px 65px;
+padding: 100px 2px 65px;
 color: var(--color-white);
 }
 
