@@ -1,4 +1,5 @@
 import { disableScroll, enableScroll } from '../utils/index.js';
+import SmoothScroll from 'smooth-scroll';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
@@ -48,11 +49,23 @@ export const burger = () => {
         checkClass();
     });
 
+    const scroll = (link) => {
+        const id = link.getAttribute('href').slice(1);
+        const anchor = document.getElementById(id);
+
+        setTimeout(() => {
+            var scroll = new SmoothScroll();
+            scroll.animateScroll(anchor, link);
+        }, 0)
+    };
+
     menuLinks.forEach((link) => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
             hideBurger();
             checkClass();
-            enableScroll();
+            scroll(link);
         });
     });
 };
