@@ -5,7 +5,6 @@ export const fontsTask = () => {
         [paths.fonts.src],
         {
           encoding: false,
-          removeBOM:false
         }
     )
         .pipe(plugins.ttf2woff())
