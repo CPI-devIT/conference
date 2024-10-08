@@ -8,5 +8,6 @@ import './_just-validate.js';
 import './_modals.js';
 // import './_nouislider.js';
 import './_tabs.js';
+// import './_smooth-scroll.js';
 // import './_tippy.js';
 // import './_tippy.js';
