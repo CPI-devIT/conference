@@ -1,6 +1,8 @@
 .contacts {
 	&__title {
 		@include title(0, 700, 60px, var(--color-green-800), 1);
+
+    text-transform: uppercase;
 	}
 
 	&__inner {
