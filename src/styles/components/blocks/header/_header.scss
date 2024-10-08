@@ -11,6 +11,7 @@
 		content: '';
 		position: absolute;
 		inset: 0;
+		z-index: -1;
 		background-image: url('../img/bg/section-bg.jpg');
 		background-position: top center;
 		opacity: 0;
