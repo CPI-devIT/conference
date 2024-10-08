@@ -7,4 +7,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
+
+	.info-card {
+		&__title {
+			max-width: 220px;
+		}
+	}
 }
