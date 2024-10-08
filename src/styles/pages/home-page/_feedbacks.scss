@@ -1,0 +1,16 @@
+.feedbacks {
+&__title {
+@include title(23px);
+}
+
+&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+	}
+
+
+&__button {
+  max-width: 290px;
+}
+}

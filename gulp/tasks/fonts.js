@@ -3,7 +3,9 @@ export const fontsTask = () => {
 
     plugins.gulp.src(
         [paths.fonts.src],
-        {encoding: false}
+        {
+          encoding: false,
+        }
     )
         .pipe(plugins.ttf2woff())
         .pipe(plugins.gulp.dest(paths.fonts.app))
