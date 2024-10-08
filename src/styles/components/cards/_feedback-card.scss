@@ -1,0 +1,37 @@
+.feedbacks-card {
+@include flex-alignment(40px, space-between,flex-start, row);
+
+position: relative;
+border-radius: 60px;
+padding: 45px 58px 40px;
+width: 100%;
+height: 100%;
+background-color: var(--color-grey-100);
+
+&__img {
+@include circle(100px);
+}
+
+&__inner{
+width: 100%;
+max-width:317px;
+}
+
+&__name {
+display: block;
+margin-bottom: 15px;
+font-weight: 300;
+font-size: 24px;
+}
+
+&__review {
+font-weight: 300;
+
+
+	p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+}
+}

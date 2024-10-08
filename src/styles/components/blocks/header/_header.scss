@@ -1,13 +1,82 @@
 .header {
-	position: relative;
-	top: 0;
-	right: 0;
+	position: absolute;
 	left: 0;
+	right: 0;
+	top: 0;
 	z-index: 2;
+
+	&::before {
+		@include bg-properties;
+
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url('../img/bg/section-bg.jpg');
+		background-position: top center;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
 
 	&--fixed {
 		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
+
+		&::before {
+			opacity: 1;
+		}
+
+		.header__nav {
+			position: relative;
+		}
+	}
+
+	&--burger {
+		position: fixed;
+
+		.header__nav {
+			background-color: var(--color-green-800);
+		}
+	}
+
+	&__nav {
+		padding: 42px 0;
+		transition: background-color 0.3s;
+	}
+
+	&__container {
+		@include flex-alignment(60px, space-between, center);
+
+		max-width: 1360px;
+	}
+
+	&__partners {
+		@include flex-alignment(50px, flex-start, center);
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		border-radius: 4px;
+		transition: box-shadow 0.3s;
+
+		&:focus-visible {
+			@include focus-visible;
+		}
+	}
+
+	&__logo {
+		object-fit: contain;
+	}
+
+	&__account {
+		display: none;
+
+		&--active {
+			@include flex-simple(15px);
+
+			margin-left: auto;
+		}
 	}
 }

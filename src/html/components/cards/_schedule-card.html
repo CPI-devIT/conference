@@ -1,0 +1,14 @@
+<article class="schedule-card @class">
+    <b>@title</b>
+    @for (var i = 0; i < info.length; i++) { <div> `+info[i]+` </div>}
+
+        @if(typeof img !== 'undefined' && img) {
+        <div class="schedule-card__image">
+            <picture>
+                <source srcset="img/schedule/@img.avif" type="image/avif">
+                <source srcset="img/schedule/@img.webp" type="image/webp">
+                <img class="schedule-card__img" src="img/schedule/@img.jpg" alt="Фото 1" width="80" height="80" loading="lazy">
+            </picture>
+        </div>
+        }
+</article>

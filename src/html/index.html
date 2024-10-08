@@ -1,32 +1,30 @@
 @include('./settings/_head.html', {
-'title' : 'Заголовок текщей страницы',
-'description' : 'Описание текщей страницы',
-'keywords' : 'это, ключевые, запросы, текщей страницы',
-'robots' : 'noindex, nofollow',
-'ogImage' : '',
+'title' : 'Научно-практическая конференция | Главная страница',
+'description' : 'I научно-практическая конференция по экологии для студентов, молодых учёных и преподавателей.',
+'keywords' : 'научно-практическая конференция по экологии, экология для студентов, молодые ученые в экологии, преподаватели экологии, исследования в области экологии, экологические проблемы, экология и устойчивое развитие, молодежь и экология',
+'robots' : 'index, follow',
+'ogImage' : 'img/previews/home-preview.jpg',
 })
 
-@include('./components/blocks/_header.html')
+@include('./components/blocks/header/_header.html')
 
-<!-- <div class="graph-modal">
-    @include('./components/blocks/modals/_modal.html')
+<div class="graph-modal">
     @include('./components/blocks/modals/_thank-modal.html')
-</div> -->
+</div>
 
 <main class="main">
-    <div class="container">
-        <p class="text">
-			Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. То языкового, агентство не буквоград щеке своих, 
-			проектах несколько прямо семантика на берегу коварных текстами пустился страна всемогущая пунктуация ты ведущими назад, дорогу предложения 
-			грамматики пор? Ручеек возвращайся назад осталось семантика эта она дал речью взгляд себя проектах? Свой бросил дорогу ipsum возвращайся жизни 
-			которое, заглавных всеми необходимыми коварных выйти послушавшись безопасную алфавит решила текста сих залетают домах назад правилами 
-			повстречался lorem. Все коварных залетают грамматики пояс лучше ведущими меня, по всей ручеек деревни страна домах алфавит рыбного 
-			подпоясал живет не города курсивных прямо маленькая обеспечивает рыбными там скатился моей? Инициал, даже?
-		</p>
-        <p class="text">
-			Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Переулка вскоре бросил силуэт текста, реторический дорогу, переписывается языкового то живет ты речью, рекламных lorem которой даль? Пунктуация океана ему, возвращайся текстов однажды заголовок что? Грустный составитель назад точках скатился букв пояс ipsum даль всемогущая по всей вдали! Оксмокс, путь. Семь?
-		</p>
-    </div>
+    @include('./pages/home-page/_hero.html')
+    @include('./pages/home-page/_advantages.html')
+    @include('./pages/home-page/_news.html')
+    @include('./pages/home-page/_members.html')
+    @include('./pages/home-page/_registration.html')
+    @include('./pages/home-page/_programm.html')
+    @include('./pages/home-page/_stream.html')
+    @include('./pages/home-page/_sections.html')
+    @include('./pages/home-page/_feedbacks.html')
+    @include('./pages/home-page/_materials.html')
+    @include('./pages/home-page/_team.html')
+    @include('./pages/home-page/_contacts.html')
 </main>
 
 @include('./components/blocks/_footer.html')

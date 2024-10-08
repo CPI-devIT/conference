@@ -1,2 +1,3 @@
-// import GraphTabs from 'graph-tabs';
-// const tabs = new GraphTabs('tab');
+import GraphTabs from 'graph-tabs';
+new GraphTabs('sections-tabs');
+new GraphTabs('programm-tabs');

@@ -1,0 +1,41 @@
+<section class="advantages section section--radius section--over section--under" id="advantages">
+    <div class="container">
+        <h2 class="sr-only">
+            Что будет на конференции
+        </h2>
+        <ul class="advantages__items">
+            <li class="advantages__item">
+                @include('../../components/cards/_info-card.html', {
+                'tag' : 'h3',
+                'title' : '30+ <br> спикеров',
+                'text' : ['Профессионалы из индустрии расскажут о самом важном', 'Второй параграф'],
+                'icon' : 'microphone',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_info-card.html', {
+                'tag' : 'h3',
+                'title' : '1200+ участников',
+                'text' : ['Конференция объеденит участников со всей России'],
+                'icon' : 'users',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_info-card.html', {
+                'tag' : 'h3',
+                'title' : 'Новые знакомства',
+                'text' : ['Возможность найти новых сотрудников, поставщиков, работодателей'],
+                'icon' : 'hands',
+                })
+            </li>
+            <li class="advantages__item">
+                @include('../../components/cards/_info-card.html', {
+                'tag' : 'h3',
+                'title' : '500+ докладов',
+                'text' : ['Возможность представить свои разработки, исследования или услуги'],
+                'icon' : 'chat',
+                })
+            </li>
+        </ul>
+    </div>
+</section>

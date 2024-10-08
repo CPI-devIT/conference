@@ -1,0 +1,10 @@
+.advantages {
+	z-index: unset;
+
+	&__items {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}

@@ -1,0 +1,33 @@
+.registration {
+	&__inner {
+		@include flex-alignment(60px, space-between, flex-start);
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 480px;
+	}
+
+	&__title {
+		@include title(19px);
+	}
+
+	&__text {
+		font-weight: 300;
+		font-size: 24px;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+
+	&__form {
+		border-radius: 30px;
+		padding: 70px 55px 45px;
+		width: 100%;
+		max-width: 600px;
+		background-color: var(--color-white);
+	}
+}

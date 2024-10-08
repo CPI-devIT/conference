@@ -1,0 +1,44 @@
+.stream {
+  @include bg-properties(cover);
+
+	padding: 200px 0 120px;
+	background-image: url('../img/bg/section-bg.jpg');
+
+	&__title {
+		@include title( 22px,600,28px,var(--color-white),1.3);
+	}
+
+	&__plaing {
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+		width: 100%;
+		aspect-ratio: 1.9;
+	}
+
+	&__preview {
+    @include bg-properties(cover);
+
+
+		z-index: 1;
+		border-radius: 40px;
+		width: 100%;
+		height: 60vh;
+    cursor: pointer;
+
+		&--hidden {
+      display: none;
+		}
+
+	}
+
+	&__video {
+		display: none;
+		width: 100%;
+		height: 60vh;
+
+		&--active {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<header class="header">
+    <div class="overlay" aria-hidden data-menu-overlay></div>
+    <nav class="header__nav">
+        <div class="container header__container">
+            <a class="header__logo logo" href="#" target="_blank">
+                <picture>
+                    <source srcset="img/logos/conference-logo.avif" type="image/avif">
+                    <source srcset="img/logos/conference-logo.webp" type="image/webp">
+                    <img class="logo__img" src="img/logos/conference-logo.png" alt="Первая Научно-Практическая Конференция По Экологии" width="332" height="55">
+                </picture>
+            </a>
+
+            <ul class="header__partners">
+                <li class="header__partner">
+                    <a class="header__link" href="#">
+                        <img class="header__logo" src="img/logos/mp-logo.svg" alt="Министерство Просвещения Российской Федерации" width="125" height="47">
+                    </a>
+                </li>
+                <li class="header__partner">
+                    <a class="header__link" href="#">
+                        <img class="header__logo" src="img/logos/cpi-logo.svg" alt="Центр Просветительских Инициатив" width="150" height="34">
+                    </a>
+                </li>
+                <li class="header__partner">
+                    <a class="header__link" href="#">
+                        <img class="header__logo" src="img/logos/eco-logo.svg" alt="Российский Экологический Оператор" width="135" height="32">
+                    </a>
+                </li>
+                <li class="header__partner">
+                    <a class="header__link" href="#">
+                        <img class="header__logo" src="img/logos/mnvo-logo.svg" alt="Министерство науки и высшего образования Российской Федерации" width="168" height="48">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="header__account">
+                <a class="button button--light" href="#registration-block">Войти</a>
+                <a class="button button--light" href="#registration-block">Зарегистрироваться</a>
+            </div>
+
+            <button class="burger-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="burger-menu" data-burger-button>
+                <span class="burger-button__line" aria-hidden></span>
+            </button>
+            @include('./_burger-menu.html')
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,27 @@
+.materials {
+	&__title {
+		@include title(110px, 700, 60px, var(--color-green-800), 1);
+
+		text-transform: uppercase;
+	}
+
+	&__spollers {
+		margin-bottom: 42px;
+	}
+
+	&__subtitle {
+		@include title(42px);
+
+		width: 100%;
+		max-width: 700px;
+	}
+
+	&__downloads {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__download {
+		flex-basis: 50%;
+	}
+}
