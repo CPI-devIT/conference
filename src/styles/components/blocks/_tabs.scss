@@ -9,13 +9,7 @@
 		&--active {
 			color: var(--color-black);
 			background-color: var(--color-grey-100);
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--color-black);
-					background-color: var(--color-grey-100);
-				}
-			}
+			pointer-events: none;
 		}
 
 		&:focus {
