@@ -60,10 +60,12 @@ export const burger = () => {
         const id = link.getAttribute('href').slice(1);
         const anchor = document.getElementById(id);
 
-        setTimeout(() => {
-            const scroll = new SmoothScroll();
-            scroll.animateScroll(anchor, link);
-        }, 0)
+        if (anchor) {
+            setTimeout(() => {
+                const scroll = new SmoothScroll();
+                scroll.animateScroll(anchor, link);
+            }, 0)
+        }
     };
 
     menuLinks.forEach((link) => {
