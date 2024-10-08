@@ -16,6 +16,12 @@ export const burger = () => {
             burgerButton.setAttribute('aria-expanded', 'true');
             burgerButton.setAttribute('aria-label', 'закрыть меню');
             disableScroll();
+
+            document.addEventListener('keydown', (event) => {
+                if (event.code === 'Escape') {
+                    hideBurger();
+                }
+            })
         } else {
             burgerButton.setAttribute('aria-expanded', 'false');
             burgerButton.setAttribute('aria-label', 'открыть меню');
@@ -31,6 +37,7 @@ export const burger = () => {
         buttonsContainer.classList.remove('header__account--active');
         header.classList.remove('header--fixed');
         header.classList.remove('header--burger');
+        checkClass();
     }
 
     burgerButton.addEventListener('click', () => {
@@ -49,12 +56,12 @@ export const burger = () => {
         checkClass();
     });
 
-    const scroll = (link) => {
+    const scrollToBlock = (link) => {
         const id = link.getAttribute('href').slice(1);
         const anchor = document.getElementById(id);
 
         setTimeout(() => {
-            var scroll = new SmoothScroll();
+            const scroll = new SmoothScroll();
             scroll.animateScroll(anchor, link);
         }, 0)
     };
@@ -65,7 +72,7 @@ export const burger = () => {
 
             hideBurger();
             checkClass();
-            scroll(link);
+            scrollToBlock(link);
         });
     });
 };
