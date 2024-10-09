@@ -74,27 +74,27 @@
 	&__account {
 		display: none;
 
-		a {
-			background-color: var(--color-green-400);
-
-			&:focus-visible {
-				box-shadow: 0 0 0 2px var(--color-green-400);
-				color: var(--color-white);
-				background-color: transparent;
-			}
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--color-green-400);
-					background-color: var(--color-white);
-				}
-			}
-		}
-
 		&--active {
 			@include flex-simple(15px);
 
 			margin-left: auto;
+		}
+	}
+
+	&__registration {
+		background-color: var(--color-green-400);
+
+		&:focus-visible {
+			box-shadow: 0 0 0 2px var(--color-green-400);
+			color: var(--color-white);
+			background-color: transparent;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-green-400);
+				background-color: var(--color-white);
+			}
 		}
 	}
 }
