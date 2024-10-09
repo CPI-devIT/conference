@@ -1,4 +1,4 @@
-export const stream = () => {
+const stream = () => {
     const preview = document.querySelector('.stream__preview');
     const video = document.querySelector('.stream__video');
 
@@ -12,3 +12,5 @@ export const stream = () => {
         preview.addEventListener('click', clickHandler);
     }
 }
+
+stream();

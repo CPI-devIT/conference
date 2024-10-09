@@ -1,5 +1,5 @@
 import { disableScroll, enableScroll } from '../utils/index.js';
-import SmoothScroll from 'smooth-scroll';
+import {scrollToBlock} from '../project/_scroll-to-block.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
@@ -55,20 +55,6 @@ export const burger = () => {
         hideBurger();
         checkClass();
     });
-
-    const scrollToBlock = (link) => {
-        const id = link.getAttribute('href').slice(1);
-        const anchor = document.getElementById(id);
-
-        if (anchor) {
-            setTimeout(() => {
-                const scroll = new SmoothScroll();
-                scroll.animateScroll(anchor, link, {
-                    header: '.header'
-                });
-            }, 0)
-        }
-    };
 
     menuLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
