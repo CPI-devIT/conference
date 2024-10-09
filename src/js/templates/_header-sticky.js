@@ -2,15 +2,16 @@ import { throttle } from '../utils/index.js';
 
 export const stickyHeader = () => {
     const header = document.querySelector('.header');
+    const hero = document.querySelector('.hero');
+    let heroHeight = hero ? hero.offsetHeight : 500;
     const burgerMenu = document.querySelector('.burger-menu');
 
     if (header) {
-
         const changeClasses = () => {
             if (!burgerMenu.classList.contains('burger-menu--active')) {
                 const scrollDistance = window.scrollY;
 
-                if (scrollDistance > 500) {
+                if (scrollDistance > heroHeight) {
                     header.classList.add('header--fixed');
                 } else {
                     header.classList.remove('header--fixed');
