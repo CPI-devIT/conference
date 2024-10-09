@@ -1,6 +1,6 @@
 import { throttle } from '../utils/index.js';
 
-export const animateHeroImage = () => {
+const animateHeroImage = () => {
     const img = document.querySelector('.hero__img');
 
     if (img) {
@@ -31,3 +31,5 @@ export const animateHeroImage = () => {
         window.addEventListener('scroll', changeClassesTrottle);
     };
 };
+
+animateHeroImage();

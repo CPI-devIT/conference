@@ -1,7 +1,5 @@
 .programm {
-  z-index: unset;
-
-  	&__title {
+	&__title {
 		@include title;
 	}
 }

@@ -95,21 +95,17 @@ body {
 }
 
 .section {
+	position: relative;
+	z-index: 1;
+	margin-top: -60px;
+	border-radius: 60px;
 	padding: 120px 0;
 	background-color: var(--color-white);
 
 	&--under {
-		margin-top: -60px;
-		padding-top: 180px;
-	}
-
-	&--over {
-		position: relative;
-		z-index: 1;
-	}
-
-	&--radius {
-		border-radius: 60px;
+		z-index: 0;
+		border-radius: 0;
+		padding: 180px 0;
 	}
 
 	&--gradient {

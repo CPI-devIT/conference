@@ -1,0 +1,27 @@
+.members {
+	&__title {
+		@include title(50px, 700, 60px, var(--color-green-800), 1);
+
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		@include title(100px, 700, 40px, var(--color-black), 1.3);
+
+		width: 100%;
+		max-width: 965px;
+	}
+
+	&__part {
+		margin-bottom: 120px;
+	}
+
+	&__stages {
+		margin-bottom: 100px;
+
+		.stages__title {
+			width: 100%;
+			max-width: 480px;
+		}
+	}
+}
