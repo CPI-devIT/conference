@@ -1,14 +1,15 @@
 .contacts {
-	&__title {
-		@include title(0, 700, 60px, var(--color-green-800), 1);
+	padding-top: 120px;
 
-    text-transform: uppercase;
+	&__title {
+		@include title(80px, 700, 60px, var(--color-green-800), 1);
+
+		text-transform: uppercase;
 	}
 
 	&__inner {
-		@include flex-alignment(78px, flex-start, flex-start, column);
+		@include flex-simple(78px, column);
 
-		padding: 83px 0 65px;
 		font-weight: 600;
 		font-size: 28px;
 		line-height: 1.3;

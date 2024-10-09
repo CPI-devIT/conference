@@ -1,6 +1,4 @@
 .members {
-	z-index: unset;
-
 	&__title {
 		@include title(50px, 700, 60px, var(--color-green-800), 1);
 

@@ -10,10 +10,6 @@
 	}
 
 	&__text {
-		&--list {
-			list-style: inside;
-		}
-
 		p {
 			&:not(:last-child) {
 				margin-bottom: 16px;

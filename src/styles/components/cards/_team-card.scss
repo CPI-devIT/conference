@@ -8,14 +8,17 @@
 		background-color: var(--color-white);
 
 		.team-card__img {
-			@include circle(100px);
+			width: 100px;
+			height: 100px;
 		}
 	}
 
 	&__img {
-		@include circle(250px);
-
 		margin-bottom: 25px;
+		border-radius: 50%;
+		width: 250px;
+		height: 250px;
+		object-fit: cover;
 	}
 
 	&__name {

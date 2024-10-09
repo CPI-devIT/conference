@@ -10,21 +10,22 @@ export const burger = () => {
     const partner = document.querySelector(".header__partners");
     const header = document.querySelector(".header");
 
+    const keyDownHandler = (event) => {
+        if (event.code === 'Escape') {
+            hideBurger();
+        }
+    }
 
     const checkClass = () => {
         if (burgerButton.classList.contains('burger-button--active')) {
             burgerButton.setAttribute('aria-expanded', 'true');
             burgerButton.setAttribute('aria-label', 'закрыть меню');
+            document.addEventListener('keydown', keyDownHandler);
             disableScroll();
-
-            document.addEventListener('keydown', (event) => {
-                if (event.code === 'Escape') {
-                    hideBurger();
-                }
-            })
         } else {
             burgerButton.setAttribute('aria-expanded', 'false');
             burgerButton.setAttribute('aria-label', 'открыть меню');
+            document.removeEventListener('keydown', keyDownHandler);
             enableScroll();
         }
     };
@@ -37,7 +38,6 @@ export const burger = () => {
         buttonsContainer.classList.remove('header__account--active');
         header.classList.remove('header--fixed');
         header.classList.remove('header--burger');
-        checkClass();
     }
 
     burgerButton.addEventListener('click', () => {
@@ -63,7 +63,9 @@ export const burger = () => {
         if (anchor) {
             setTimeout(() => {
                 const scroll = new SmoothScroll();
-                scroll.animateScroll(anchor, link);
+                scroll.animateScroll(anchor, link, {
+                    header: '.header'
+                });
             }, 0)
         }
     };

@@ -1,5 +1,7 @@
 .dates {
 	&__items {
 		@include flex-simple(20px 95px);
+
+		flex-wrap: wrap;
 	}
 }
