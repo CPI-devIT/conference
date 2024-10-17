@@ -33,9 +33,12 @@ opacity: 1;
 transition:
 color 0.3s,
 background-color 0.3s;
-
 }
 
 .swiper-button-prev {
   left: 30px;
+}
+
+:root {
+  --swiper-navigation-size: 24px;
 }
