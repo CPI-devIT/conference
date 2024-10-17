@@ -12,20 +12,62 @@
 	}
 
 	&__list {
-		&--orgkom {
-			.team__items {
-				gap: 1px;
-			}
-		}
-
 		&:not(:last-child) {
 			margin-bottom: 120px;
 		}
 	}
 
-	&__items {
-		display: grid;
-		grid-template-columns: 25% 25% 25% 25%;
-		gap: 16px;
-	}
+}
+
+
+.swiper__invite-button-next,
+.swiper__invite-button-prev,
+.swiper__org-button-next,
+.swiper__org-button-prev {
+@include flex-alignment(0);
+@include circle(60px, var(--color-green-400));
+
+position: absolute;
+right: 30px;
+top: 600px;
+z-index: 99;
+color: var(--color-white);
+opacity: 1;
+transition:
+color 0.3s,
+background-color 0.3s;
+cursor: pointer;
+
+  &::after {
+			@include bg-properties(contain);
+
+			content: '';
+			width: 15px;
+			height: 27px;
+			background-image: url('../img/icons/org-arrow.svg');
+		}
+
+ @media (any-hover: hover) {
+			&:hover {
+				background-color: var(--color-green-800);
+			}
+		}
+}
+
+.swiper__org-button-next,
+.swiper__org-button-prev {
+  top:unset;
+  bottom: 350px;
+}
+
+
+
+.swiper__invite-button-prev,
+.swiper__org-button-prev  {
+  left: 30px;
+  transform: rotate(180deg);
+}
+
+:root {
+  --swiper-navigation-size: 24px;
 }

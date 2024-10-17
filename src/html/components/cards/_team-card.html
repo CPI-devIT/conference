@@ -1,11 +1,16 @@
-<article class="team-card @class">
-    @if(typeof img !== 'undefined' && img) {
-    <picture>
-        <source srcset="img/team/@img.avif" type="image/avif">
-        <source srcset="img/team/@img.webp" type="image/webp">
-        <img class="team-card__img " src="img/team/@img.jpg" alt="@alt" loading="lazy">
-    </picture>
-    }
-    <span class="team-card__name ">@name</span>
+<article class="team-card">
+  @if(typeof img !== 'undefined' && img) {
+  <picture>
+    <source srcset="img/team/@img.avif" type="image/avif">
+    <source srcset="img/team/@img.webp" type="image/webp">
+    <img class="team-card__img " src="img/team/@img.jpg" alt="@alt" loading="lazy">
+  </picture>
+  }
+  <div>
+  <span class="team-card__name">@name</span>
+  <div class="team-card__text">
     <p>@position</p>
+    <p>@description</p>
+  </div>
+  </div>
 </article>

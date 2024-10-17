@@ -66,9 +66,7 @@
 		z-index: 2;
 		color: var(--color-white);
 		opacity: 1;
-		transition:
-			color 0.3s,
-			background-color 0.3s;
+		transition: color 0.3s, background-color 0.3s;
 
 		&::after {
 			@include bg-properties(contain);
