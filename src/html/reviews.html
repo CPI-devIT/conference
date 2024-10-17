@@ -1,0 +1,18 @@
+@include('./settings/_head.html', {
+'title' : 'Научно-практическая конференция | Страница новости',
+'description' : 'I научно-практическая конференция по экологии для студентов, молодых учёных и преподавателей.',
+'keywords' : 'научно-практическая конференция по экологии, экология для студентов, молодые ученые в экологии, преподаватели экологии, исследования в области экологии, экологические проблемы, экология и устойчивое развитие, молодежь и экология',
+'robots' : 'index, follow',
+'ogImage' : 'img/previews/home-preview.jpg',
+})
+
+@include('./components/blocks/header/_header.html')
+
+<main class="main">
+    <!-- @include('./pages/one-news-page/_headbg.html' ) -->
+    @include('./pages/reviews-page/_reviews.html')
+</main>
+
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
