@@ -3,8 +3,8 @@ import { Navigation } from 'swiper/modules';
 
 Swiper.use([Navigation]);
 
-if (document.querySelector('.team__swiper')) {
-    new Swiper('.team__swiper', {
+if (document.querySelector('.team-org__swiper')) {
+    new Swiper('.team-org__swiper', {
 
         speed: 800,
         slidesPerGroup: 1,
@@ -12,8 +12,8 @@ if (document.querySelector('.team__swiper')) {
         spaceBetween: 10,
 
         navigation: {
-            nextEl: ".swiper__invite-button-next",
-            prevEl: ".swiper__invite-button-prev",
+            nextEl: ".swiper__org-button-next",
+            prevEl: ".swiper__org-button-prev",
         },
 
     });
