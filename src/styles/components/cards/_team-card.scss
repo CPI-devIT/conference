@@ -1,17 +1,13 @@
 .team-card {
-	width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 60px 76px 68px 55px;
+	width: 89%;
 	height: 100%;
+  background-color: var(--color-white);
+  gap: 53px;
 
-	&--orgkom {
-		border-radius: 60px;
-		padding: 48px 45px;
-		background-color: var(--color-white);
-
-		.team-card__img {
-			width: 100px;
-			height: 100px;
-		}
-	}
 
 	&__img {
 		margin-bottom: 25px;
@@ -28,4 +24,14 @@
 		font-size: 24px;
 		line-height: 1.25;
 	}
+
+  &__text {
+    max-width: 750px;
+
+    p {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+  }
 }

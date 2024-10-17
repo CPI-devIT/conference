@@ -12,20 +12,30 @@
 	}
 
 	&__list {
-		&--orgkom {
-			.team__items {
-				gap: 1px;
-			}
-		}
-
 		&:not(:last-child) {
 			margin-bottom: 120px;
 		}
 	}
 
-	&__items {
-		display: grid;
-		grid-template-columns: 25% 25% 25% 25%;
-		gap: 16px;
-	}
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+@include flex-alignment(0);
+@include circle(60px, var(--color-green-400));
+
+right: 30px;
+top: 600px;
+z-index: 99;
+color: var(--color-white);
+opacity: 1;
+transition:
+color 0.3s,
+background-color 0.3s;
+
+}
+
+.swiper-button-prev {
+  left: 30px;
 }
