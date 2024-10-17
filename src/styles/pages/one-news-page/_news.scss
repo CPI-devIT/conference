@@ -1,94 +1,99 @@
 .news-page {
-	position: relative;
-	z-index: unset;
-	margin-top: 200px;
+position: relative;
+z-index: unset;
+margin-top: 200px;
 
-	&::before {
-		@include bg-properties;
+&::before {
+@include bg-properties;
 
-		content: '';
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: -200px;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-		background-image: url('../img/bg/section-bg.jpg');
-	}
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+top: -200px;
+z-index: -1;
+width: 100%;
+height: 100%;
+background-image: url('../img/bg/section-bg.jpg');
+}
 
-	&__title {
-		@include title(53px, 700, 40px, var(--color-black), 1.1);
+&__date {
+margin-bottom: 50px;
+font-weight: 700;
+}
 
-		width: 100%;
-		max-width: 965px;
-	}
+&__title {
+@include title(53px, 700, 40px, var(--color-black), 1.1);
 
-	&__swiper {
-		position: relative;
-		margin-bottom: 53px;
-		padding-bottom: 53%;
-	}
+width: 100%;
+max-width: 965px;
+}
 
-	&__sliders {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
+&__swiper {
+position: relative;
+margin-bottom: 53px;
+padding-bottom: 53%;
+}
 
-	&__img {
-		border-radius: 30px;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
+&__sliders {
+position: absolute;
+width: 100%;
+height: 100%;
+}
 
-	&__text {
-		font-weight: 300;
-		font-size: 24px;
+&__img {
+border-radius: 30px;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
 
-		h2 {
-			margin: 44px 0 16px;
-			font-weight: 700;
-			font-size: 29px;
-			line-height: 1.2;
-		}
-	}
+&__text {
+font-weight: 300;
+font-size: 24px;
 
-	.swiper-button-next,
-	.swiper-button-prev {
-		@include flex-alignment(0);
-		@include circle(60px, var(--color-green-400));
+h2 {
+margin: 44px 0 16px;
+font-weight: 700;
+font-size: 29px;
+line-height: 1.2;
+}
+}
 
-		right: 30px;
-		top: unset;
-		bottom: 26px;
-		z-index: 2;
-		color: var(--color-white);
-		opacity: 1;
-		transition:
-			color 0.3s,
-			background-color 0.3s;
+.swiper-button-next,
+.swiper-button-prev {
+@include flex-alignment(0);
+@include circle(60px, var(--color-green-400));
 
-		&::after {
-			@include bg-properties(contain);
+right: 30px;
+top: unset;
+bottom: 26px;
+z-index: 2;
+color: var(--color-white);
+opacity: 1;
+transition:
+color 0.3s,
+background-color 0.3s;
 
-			content: '';
-			width: 21px;
-			height: 18px;
-			background-image: url('../img/icons/arrow-long.svg');
-		}
+&::after {
+@include bg-properties(contain);
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: var(--color-green-800);
-			}
-		}
-	}
+content: '';
+width: 21px;
+height: 18px;
+background-image: url('../img/icons/arrow-long.svg');
+}
 
-	.swiper-button-prev {
-		left: unset;
-		right: 90px;
-		transform: rotate(180deg);
-	}
+@media (any-hover: hover) {
+&:hover {
+background-color: var(--color-green-800);
+}
+}
+}
+
+.swiper-button-prev {
+left: unset;
+right: 90px;
+transform: rotate(180deg);
+}
 }
