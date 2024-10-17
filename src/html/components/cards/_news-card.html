@@ -1,12 +1,15 @@
 <article class="news-card">
-    <div class="news-card__image">
-        <picture>
-            <source srcset="img/news/@img.avif" type="image/avif">
-            <source srcset="img/news/@img.webp" type="image/webp">
-            <img class="news-card__img" src="img/news/@img.jpg" alt="@alt" width="400" height="227" loading="lazy">
-        </picture>
-    </div>
-    <a class="news-card__text" href="#">
-        @title
-    </a>
+  <div class="news-card__image">
+    <picture>
+      <source srcset="img/news/@img.avif" type="image/avif">
+      <source srcset="img/news/@img.webp" type="image/webp">
+      <img class="news-card__img" src="img/news/@img.jpg" alt="@alt" width="400" height="227" loading="lazy">
+    </picture>
+  </div>
+  <a class="news-card__text" href="#">
+    <time class="news-card__date" datetime="@date">
+      @date
+    </time>
+    @title
+  </a>
 </article>
