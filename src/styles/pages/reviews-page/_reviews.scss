@@ -1,9 +1,6 @@
 .reviews-page {
 	&__title {
 		@include title(53px, 700, 40px, var(--color-black), 1.1);
-
-		width: 100%;
-		max-width: 965px;
 	}
 
 	&__items {
