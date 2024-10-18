@@ -2,7 +2,10 @@
 @import '../pages/home-page/hero';
 @import '../pages/home-page/advantages';
 @import '../pages/home-page/news';
-@import '../pages/home-page/members';
+@import '../pages/home-page/members/members';
+@import '../pages/home-page/members/dates';
+@import '../pages/home-page/members/form-part';
+@import '../pages/home-page/members/stages';
 @import '../pages/home-page/registration';
 @import '../pages/home-page/programm';
 @import '../pages/home-page/stream';
@@ -11,5 +14,9 @@
 @import '../pages/home-page/materials';
 @import '../pages/home-page/team';
 @import '../pages/home-page/contacts';
+
+// news-one page
 @import '../pages/one-news-page/news';
-@import '../pages/one-news-page/headbg';
+
+// reviews page
+@import '../pages/reviews-page/reviews';

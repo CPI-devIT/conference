@@ -1,0 +1,10 @@
+.stages {
+	&__title {
+		@include title(22px);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}

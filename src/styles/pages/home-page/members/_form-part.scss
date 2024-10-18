@@ -1,0 +1,22 @@
+.form-part {
+	&__title {
+		@include title(22px);
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.info-card {
+		padding: 102px 72px 20px 56px;
+
+		&__title {
+			@include title(22px, 600, 24px, var(--color-black), 1.2);
+		}
+
+		&__text {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,33 +1,49 @@
 .team {
-background-color: var(--color-grey-100);
+	background-color: var(--color-grey-100);
 
-&__title {
-@include title(110px, 700, 60px, var(--color-green-800), 1);
+	&__title {
+		@include title(110px, 700, 60px, var(--color-green-800), 1);
 
-text-transform: uppercase;
-}
+		text-transform: uppercase;
+	}
 
-&__subtitle {
-@include title(25px);
-}
+	&__subtitle {
+		@include title(25px);
+	}
 
-&__items {
-display: grid;
-grid-template-columns: 25% 25% 25% 25%;
-margin-bottom: 110px;
-gap: 16px;
+	&__list {
+		&:not(:last-child) {
+			margin-bottom: 120px;
+		}
+	}
 
-&--orgkom {
-  margin-bottom: 0;
-  gap: 1px;
-}
-}
+	&__inner {
+		position: relative;
+	}
 
-&__item{
-  &--orgkom{
-    border-radius: 60px;
-    padding: 48px 45px;
-    background-color: var(--color-white);
-  }
-}
+	&__swiper {
+		position: static;
+	}
+
+	.swiper-controls {
+		left: -90px;
+		top: 50%;
+		justify-content: space-between;
+		width: calc(100% + 180px);
+		transform: translateY(-50%);
+
+		@include mq(xl) {
+			left: -30px;
+			width: calc(100% + 60px);
+		}
+
+		&__button {
+			&::after {
+				width: 27px;
+				height: 15px;
+				background-image: url('../img/icons/arrow.svg');
+				transform: rotate(-90deg);
+			}
+		}
+	}
 }
