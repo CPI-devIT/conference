@@ -1,6 +1,5 @@
 import { throttle } from '../utils/index.js';
 
-
 const animateHeroImage = () => {
     const img = document.querySelector('.hero__img');
 
@@ -10,7 +9,7 @@ const animateHeroImage = () => {
         const changeClasses = () => {
             const scrollDistance = window.scrollY;
 
-            if (lastPosition > scrollDistance) {
+            if (lastPosition > scrollDistance) { 
                 // скролим вверх
                 img.classList.add('hero__img--bottom');
                 img.classList.remove('hero__img--top');
