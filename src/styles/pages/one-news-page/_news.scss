@@ -17,6 +17,12 @@ height: 100%;
 background-image: url('../img/bg/section-bg.jpg');
 }
 
+
+&__wrapper{
+display: flex;
+flex-direction: column-reverse;
+}
+
 &__date {
 margin-bottom: 50px;
 font-weight: 700;
