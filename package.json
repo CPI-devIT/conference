@@ -44,7 +44,7 @@
 		"gulp-newer": "1.4.0",
 		"gulp-notify": "4.0.0",
 		"gulp-plumber": "latest",
-		"gulp-sass": "5.1.0",
+		"gulp-sass": "^5.0.0",
 		"gulp-sourcemaps": "3.0.0",
 		"gulp-svg-sprite": "latest",
 		"gulp-ttf2woff": "1.1.1",
