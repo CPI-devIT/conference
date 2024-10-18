@@ -17,57 +17,33 @@
 		}
 	}
 
-}
+	&__inner {
+		position: relative;
+	}
 
+	&__swiper {
+		position: static;
+	}
 
-.swiper__invite-button-next,
-.swiper__invite-button-prev,
-.swiper__org-button-next,
-.swiper__org-button-prev {
-@include flex-alignment(0);
-@include circle(60px, var(--color-green-400));
+	.swiper-controls {
+		left: -90px;
+		top: 50%;
+		justify-content: space-between;
+		width: calc(100% + 180px);
+		transform: translateY(-50%);
 
-position: absolute;
-right: 30px;
-top: 600px;
-z-index: 99;
-color: var(--color-white);
-opacity: 1;
-transition:
-color 0.3s,
-background-color 0.3s;
-cursor: pointer;
-
-  &::after {
-			@include bg-properties(contain);
-
-			content: '';
-			width: 15px;
-			height: 27px;
-			background-image: url('../img/icons/org-arrow.svg');
+		@include mq(xl) {
+			left: -30px;
+			width: calc(100% + 60px);
 		}
 
- @media (any-hover: hover) {
-			&:hover {
-				background-color: var(--color-green-800);
+		&__button {
+			&::after {
+				width: 27px;
+				height: 15px;
+				background-image: url('../img/icons/arrow.svg');
+				transform: rotate(-90deg);
 			}
 		}
-}
-
-.swiper__org-button-next,
-.swiper__org-button-prev {
-  top:unset;
-  bottom: 350px;
-}
-
-
-
-.swiper__invite-button-prev,
-.swiper__org-button-prev  {
-  left: 30px;
-  transform: rotate(180deg);
-}
-
-:root {
-  --swiper-navigation-size: 24px;
+	}
 }
