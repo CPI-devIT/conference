@@ -1,5 +1,5 @@
 import { disableScroll, enableScroll } from '../utils/index.js';
-import {scrollToBlock} from '../project/_scroll-to-block.js';
+import { scrollToBlock } from '../project/_scroll-to-block.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
