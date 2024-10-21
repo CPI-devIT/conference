@@ -1,0 +1,17 @@
+@include('./settings/_head.html', {
+'title' : 'Научно-практическая конференция | Страница со сборником',
+'description' : 'I Всероссийская научно-практическая конференция по экологии для студентов и молодых ученых «Эковизия»',
+'keywords' : 'научно-практическая конференция по экологии, экология для студентов, молодые ученые в экологии, преподаватели экологии, исследования в области экологии, экологические проблемы, экология и устойчивое развитие, молодежь и экология',
+'robots' : 'index, follow',
+'ogImage' : 'img/previews/home-preview.jpg',
+})
+
+@include('./components/blocks/header/_header.html')
+
+<main class="main">
+    @include('./pages/collection-page/_collection.html')
+</main>
+
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
