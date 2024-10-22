@@ -42,7 +42,7 @@ export const burger = () => {
 
     burgerButton.addEventListener('click', () => {
         burgerButton.classList.toggle('burger-button--active');
-        menu.classList.toggle('burger-menu--active');
+        menu.classList.toggle('menu--active');
         overlay.classList.toggle('overlay--active');
         partner.classList.toggle('header__partners--hidden');
         buttonsContainer.classList.toggle('header__account--active');

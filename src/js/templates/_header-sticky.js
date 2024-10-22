@@ -4,11 +4,11 @@ export const stickyHeader = () => {
     const header = document.querySelector('.header');
     const hero = document.querySelector('.hero');
     let heroHeight = hero ? hero.offsetHeight : 500;
-    const burgerMenu = document.querySelector('.burger-menu');
+    const burgerMenu = document.querySelector('.menu');
 
     if (header) {
         const changeClasses = () => {
-            if (!burgerMenu.classList.contains('burger-menu--active')) {
+            if (!burgerMenu.classList.contains('menu--active')) {
                 const scrollDistance = window.scrollY;
 
                 if (scrollDistance > heroHeight) {
