@@ -1,0 +1,23 @@
+.later {
+	background-image: var(--gradient-primary);
+
+	&__title {
+		@include title(53px, 700, 40px, var(--color-black), 1.1);
+	}
+
+	&__wrapper {
+		@include flex-alignment(0, center, center, direction);
+
+		border-radius: 30px;
+		padding: 60px 20px;
+		min-height: 56vh;
+		background-color: var(--color-white);
+	}
+
+	&__text {
+		max-width: 380px;
+		font-weight: 300;
+		font-size: 24px;
+		text-align: center;
+	}
+}

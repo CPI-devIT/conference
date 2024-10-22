@@ -58,11 +58,13 @@ export const burger = () => {
 
     menuLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-
             hideBurger();
             checkClass();
-            scrollToBlock(link);
+
+            if (link.hasAttribute('data-scroll-home-page')) {
+                e.preventDefault();
+                scrollToBlock(link);
+            }
         });
     });
 };

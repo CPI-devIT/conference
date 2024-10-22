@@ -8,10 +8,10 @@
 
 @include('./components/blocks/header/_header.html')
 
-<main class="main">
-    @include('./pages/layouts-page/_layouts.html')
-</main>
-
+@include('./components/blocks/_later.html', {
+'title' : 'Макеты',
+'text' : 'Информация будет размещена в скором времени'
+})
 
 @include('./components/blocks/_footer.html')
 @include('./settings/_bottom.html')

@@ -1,4 +1,6 @@
 .reviews-page {
+	background-image: var(--gradient-primary);
+
 	&__title {
 		@include title(53px, 700, 40px, var(--color-black), 1.1);
 	}
