@@ -65,7 +65,7 @@ export const paths = {
         watch: `${devFolder}/img/sprites/*.svg`,
     },
     fonts: {
-        src: `${devFolder}/fonts/**/*.ttf,{encoding:false}`,
+        src: `${devFolder}/fonts/**/*.ttf`,
         app: `${productFolder}/fonts/`,
         watch: `${devFolder}/fonts/**/*`,
     },
