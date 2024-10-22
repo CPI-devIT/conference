@@ -8,9 +8,10 @@
 
 @include('./components/blocks/header/_header.html')
 
-<main class="main">
-    @include('./pages/collection-page/_collection.html')
-</main>
+@include('./components/blocks/_later.html', {
+'title' : 'Сборник',
+'text' : 'Информация будет размещена в скором времени'
+})
 
 
 @include('./components/blocks/_footer.html')
