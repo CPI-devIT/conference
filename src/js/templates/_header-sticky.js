@@ -4,7 +4,7 @@ export const stickyHeader = () => {
     const header = document.querySelector('.header');
     const hero = document.querySelector('.hero');
     let heroHeight = hero ? hero.offsetHeight : 500;
-    const burgerMenu = document.querySelector('.menu');
+    const burgerMenu = header.querySelector('.menu');
 
     if (header) {
         const changeClasses = () => {

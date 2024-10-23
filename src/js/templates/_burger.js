@@ -3,12 +3,13 @@ import { scrollToBlock } from '../project/_scroll-to-block.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
-    const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
     const buttonsContainer = document.querySelector(".header__account");
     const partner = document.querySelector(".header__partners");
     const header = document.querySelector(".header");
+    const menu = header.querySelector('[data-menu]');
+
 
     const keyDownHandler = (event) => {
         if (event.code === 'Escape') {
