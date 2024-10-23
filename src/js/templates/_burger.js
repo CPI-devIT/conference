@@ -3,12 +3,13 @@ import { scrollToBlock } from '../project/_scroll-to-block.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
-    const menu = document.querySelector('[data-menu]');
     const menuLinks = document.querySelectorAll('[data-menu-link]');
     const overlay = document.querySelector('[data-menu-overlay]');
     const buttonsContainer = document.querySelector(".header__account");
     const partner = document.querySelector(".header__partners");
     const header = document.querySelector(".header");
+    const menu = header.querySelector('[data-menu]');
+
 
     const keyDownHandler = (event) => {
         if (event.code === 'Escape') {
@@ -32,7 +33,7 @@ export const burger = () => {
 
     const hideBurger = () => {
         burgerButton.classList.remove('burger-button--active');
-        menu.classList.remove('burger-menu--active');
+        menu.classList.remove('menu--active');
         overlay.classList.remove('overlay--active');
         partner.classList.remove('header__partners--hidden');
         buttonsContainer.classList.remove('header__account--active');
@@ -42,7 +43,7 @@ export const burger = () => {
 
     burgerButton.addEventListener('click', () => {
         burgerButton.classList.toggle('burger-button--active');
-        menu.classList.toggle('burger-menu--active');
+        menu.classList.toggle('menu--active');
         overlay.classList.toggle('overlay--active');
         partner.classList.toggle('header__partners--hidden');
         buttonsContainer.classList.toggle('header__account--active');
