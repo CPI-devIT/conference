@@ -16,23 +16,25 @@
 		max-width: 965px;
 	}
 
-  &__button {
-    position: relative;
-    margin-bottom: 52px;
-    padding-left: 50px;
-    max-width: max-content;
+	&__button {
+		position: relative;
+		margin-bottom: 52px;
+		padding-left: 50px;
+		max-width: max-content;
 
-    &::before{
-      content: '';
-      position: absolute;
-      left: 17px;
-      top: 21px;
-      width: 21px;
+		&::before {
+			@include bg-properties(contain);
+
+			content: '';
+			position: absolute;
+			left: 17px;
+			top: 21px;
+			width: 21px;
 			height: 18px;
 			background-image: url('../img/icons/arrow-long.svg');
-      rotate: 180deg;
-    }
-  }
+			rotate: 180deg;
+		}
+	}
 
 	&__swiper {
 		position: relative;
@@ -64,9 +66,9 @@
 			line-height: 1.2;
 		}
 
-    p {
-				margin-bottom: 12px;
-    }
+		p {
+			margin-bottom: 12px;
+		}
 	}
 
 	.swiper-controls {
