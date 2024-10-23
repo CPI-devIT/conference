@@ -11,25 +11,19 @@
         </div>
         <div class="news-page__swiper swiper">
             <ul class="news-page__sliders swiper-wrapper">
-                <li class="news-page__slider swiper-slide">
-                    <picture>
-                        <source srcset="img/news-page/news1/@img.avif" type="image/avif">
-                        <source srcset="img/news-page/news1/@img.webp" type="image/webp">
-                        <img class="news-page__img" src="img/news-page/news1/@img.jpg" alt="@alt" width="1208" height="644" loading="lazy">
+                   @for (var i = 0; i < img.length; i++) {
+                    <li class="news-page__slider swiper-slide">
+                      <picture>
+                        <source srcset="img/news-page/news1/`+img[i]+`.avif" type="image/avif">
+                        <source srcset="img/news-page/news1/`+img[i]+`.webp" type="image/webp">
+                        <img class="news-page__img" src="img/news-page/news1/`+img[i]+`.jpg" alt="`+alt[i]+`" width="1208" height="644" loading="lazy">
                     </picture>
-                </li>
-                <!-- <li class="news-page__slider swiper-slide">
-                    <picture>
-                        <source srcset="img/news-page/news1/news1.avif" type="image/avif">
-                        <source srcset="img/news-page/news1/news1.webp" type="image/webp">
-                        <img class="news-page__img" src="img/news-page/news1/news1news-page/news1/news1.jpg" alt="Фото 1 новости" width="1208" height="644" loading="lazy">
-                    </picture>
-                </li> -->
+                  </li>}
             </ul>
-            <!-- <div class="swiper-controls">
+            <div class="swiper-controls">
                 <div class="swiper-controls__button swiper-controls__button--prev"></div>
                 <div class="swiper-controls__button swiper-controls__button--next"></div>
-            </div> -->
+            </div>
         </div>
         <div class="news-page__text">
             @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
