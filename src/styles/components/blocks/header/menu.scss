@@ -31,10 +31,6 @@
 	&__item {
 		flex-basis: 25%;
 		padding-right: 40px;
-
-    &--footer {
-      padding-right: 60px;
-    }
 	}
 
 	&__title {
@@ -42,20 +38,12 @@
 		margin-bottom: 20px;
 		font-weight: 300;
 		color: var(--color-white);
-
-    &--footer {
-      font-weight: 700;
-    }
 	}
 
 	&__list {
 		@include flex-simple(20px, column);
 
 		font-family: var(--font-title), sans-serif;
-
-    &--footer {
-      gap: 5px;
-    }
 	}
 
 	&__link {
@@ -66,21 +54,6 @@
 		transition:
 			color 0.3s,
 			box-shadow 0.3s;
-
-      &--footer {
-        font-family: var(--font-default), sans-serif;
-        font-weight: 400;
-        text-transform: none;
-        color: var(--color-white);
-
-
-			 	@media (any-hover: hover) {
-			&:hover {
-				color: var(--color-green-800)!important;
-			}
-		}
-
-      }
 
 		&:focus-visible {
 			@include focus-visible;

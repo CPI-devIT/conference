@@ -33,7 +33,7 @@ export const burger = () => {
 
     const hideBurger = () => {
         burgerButton.classList.remove('burger-button--active');
-        menu.classList.remove('burger-menu--active');
+        menu.classList.remove('menu--active');
         overlay.classList.remove('overlay--active');
         partner.classList.remove('header__partners--hidden');
         buttonsContainer.classList.remove('header__account--active');
