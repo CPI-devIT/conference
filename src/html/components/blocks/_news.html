@@ -19,10 +19,11 @@
                     </picture>
                     </li>}
             </ul>
-            <div class="swiper-controls">
+            @if (img.length > 1) { <div class="swiper-controls">
                 <div class="swiper-controls__button swiper-controls__button--prev"></div>
                 <div class="swiper-controls__button swiper-controls__button--next"></div>
             </div>
+            }
         </div>
         <div class="news-page__text">
             @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
