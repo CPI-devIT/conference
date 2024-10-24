@@ -7,7 +7,34 @@
             <ul class="news__sliders swiper-wrapper">
                 <li class="news__slider swiper-slide">
                     <ul class="news__items">
-                        <li class="news__item news__item--horizontal">
+                      <li class="news__item news__item--horizontal">
+                            @include('../../components/cards/_news-card.html', {
+                            'img' : '5',
+                            'alt' : 'Выступление',
+                            'date' : '01.11.2024',
+                            'title' : 'Начался прием заявок на участие во всероссийской научно-практической конференции "Актуальные вопросы экологического просвещения".',
+                            'href' : './news-five.html',
+                            })
+                        </li>
+                         <li class="news__item">
+                            @include('../../components/cards/_news-card.html', {
+                            'img' : '3',
+                            'alt' : 'Мужчина',
+                            'date' : '28.10.2024',
+                            'title' : ' Определены направления тем для обсуждения на научно-практической конференции «Актуальные вопросы экологического просвещения»',
+                            'href' : './news-three.html',
+                            })
+                        </li>
+                         <li class="news__item">
+                            @include('../../components/cards/_news-card.html', {
+                            'img' : '4',
+                            'alt' : 'Аудитория',
+                            'date' : '22.10.2024',
+                            'title' : 'По итогам второго заседания утверждена программа конференции "Актуальные вопросы экологического просвещения"',
+                            'href' : './news-four.html',
+                            })
+                        </li>
+                        <li class="news__item">
                             @include('../../components/cards/_news-card.html', {
                             'img' : '1',
                             'alt' : 'Свободный микрофон',
@@ -25,36 +52,9 @@
                             'href' : './news-two.html',
                             })
                         </li>
-                        <li class="news__item">
-                            @include('../../components/cards/_news-card.html', {
-                            'img' : '3',
-                            'alt' : 'Мужчина',
-                            'date' : '28.10.2024',
-                            'title' : ' Определены направления тем для обсуждения на научно-практической конференции «Актуальные вопросы экологического просвещения»',
-                            'href' : './news-three.html',
-                            })
-                        </li>
-                        <li class="news__item">
-                            @include('../../components/cards/_news-card.html', {
-                            'img' : '4',
-                            'alt' : 'Аудитория',
-                            'date' : '22.10.2024',
-                            'title' : 'По итогам второго заседания утверждена программа конференции "Актуальные вопросы экологического просвещения"',
-                            'href' : './news-four.html',
-                            })
-                        </li>
-                        <li class="news__item">
-                            @include('../../components/cards/_news-card.html', {
-                            'img' : '5',
-                            'alt' : 'Выступление',
-                            'date' : '01.11.2024',
-                            'title' : 'Начался прием заявок на участие во всероссийской научно-практической конференции "Актуальные вопросы экологического просвещения".',
-                            'href' : './news-five.html',
-                            })
-                        </li>
                     </ul>
                 </li>
-                <li class="news__slider swiper-slide">
+                <!-- <li class="news__slider swiper-slide">
                     <ul class="news__items">
                         <li class="news__item news__item--horizontal">
                             @include('../../components/cards/_news-card.html', {
@@ -141,7 +141,7 @@
                             })
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <div class="news__pagination"></div>
         </div>
