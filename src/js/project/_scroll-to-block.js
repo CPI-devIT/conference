@@ -41,3 +41,17 @@ const scrollToBlockAfterRedirect = () => {
 }
 
 scrollToBlockAfterRedirect();
+
+const clickHandler = () => {
+    const links = document.querySelectorAll("[data-scroll-home-page]")
+    if (links) {
+        links.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollToBlock(link);
+            })
+        })
+    }
+}
+
+clickHandler();

@@ -1,5 +1,4 @@
 import { disableScroll, enableScroll } from '../utils/index.js';
-import { scrollToBlock } from '../project/_scroll-to-block.js';
 
 export const burger = () => {
     const burgerButton = document.querySelector('[data-burger-button]');
@@ -58,14 +57,9 @@ export const burger = () => {
     });
 
     menuLinks.forEach((link) => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', () => {
             hideBurger();
             checkClass();
-
-            if (link.hasAttribute('data-scroll-home-page')) {
-                e.preventDefault();
-                scrollToBlock(link);
-            }
         });
     });
 };
