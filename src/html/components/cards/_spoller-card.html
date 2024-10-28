@@ -3,4 +3,12 @@
 </h4>
 <div class="spollers__body">
     @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
-</div>
+
+    <a class="spollers-document" href="@href" download>
+    <span class="spollers-document__icon" style="background-image: url('img/icons/@icon_href.svg');" aria-hidden></span>
+    <span class="spollers-document__text">
+       @text_href
+    </span>
+    </a>
+  </div>
+
