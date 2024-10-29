@@ -2028,28 +2028,6 @@ if (buttonSubmit && form) {
 
 /***/ }),
 
-/***/ "./src/js/libs/_modals.js":
-/*!********************************!*\
-  !*** ./src/js/libs/_modals.js ***!
-  \********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
-
-var modalThank = document.querySelector('[data-graph-target="modal-thank"]');
-var buttonThank = document.querySelector('[data-graph-path="modal-thank"]');
-if (modalThank && buttonThank) {
-  buttonThank.addEventListener('click', function () {
-    new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]('modal').open('modal-thank');
-  });
-
-  //buttonThank.click();
-}
-
-/***/ }),
-
 /***/ "./src/js/libs/_tabs.js":
 /*!******************************!*\
   !*** ./src/js/libs/_tabs.js ***!
@@ -2078,8 +2056,7 @@ if (document.querySelector("[data-tabs='programm-tabs']")) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _just_validate_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_just-validate.js */ "./src/js/libs/_just-validate.js");
-/* harmony import */ var _modals_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_modals.js */ "./src/js/libs/_modals.js");
-/* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_tabs.js */ "./src/js/libs/_tabs.js");
+/* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_tabs.js */ "./src/js/libs/_tabs.js");
 // import './_aos.js';
 // import './_choices.js';
 // import './_elipsis.js';
@@ -2087,7 +2064,7 @@ __webpack_require__.r(__webpack_exports__);
 // import './_isotope.js';
 
 // import './_mixitup.js';
-
+// import './_modals.js';
 // import './_nouislider.js';
 
 // import './_smooth-scroll.js';
@@ -2206,6 +2183,66 @@ var scrollToBlockAfterRedirect = function scrollToBlockAfterRedirect() {
   }
 };
 scrollToBlockAfterRedirect();
+var clickHandler = function clickHandler() {
+  var links = document.querySelectorAll("[data-scroll-home-page]");
+  if (links) {
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        scrollToBlock(link);
+      });
+    });
+  }
+};
+clickHandler();
+
+/***/ }),
+
+/***/ "./src/js/project/_sending-form.js":
+/*!*****************************************!*\
+  !*** ./src/js/project/_sending-form.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
+
+var sendForm = function sendForm() {
+  var form = document.querySelector('.registration__form');
+  var buttonSubmit = form.querySelector('.registration__button');
+  if (form) {
+    var submit = function submit(event) {
+      event.preventDefault();
+      var data = {
+        registration_email: form.querySelector('#registration-email').value,
+        registration_name: form.querySelector('#registration-name').value
+      };
+      fetch('https://nayka.mpcenter.ru/wp-json/custom-api/v1/send-mail/', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      }).then(function (response) {
+        if (response.status === 200) {
+          new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]('modal').open('modal-form-success');
+          form.querySelector('#registration-email').value = '';
+          form.querySelector('#registration-name').value = '';
+          if (buttonSubmit) {
+            buttonSubmit.setAttribute('disabled', true);
+          }
+        } else {
+          new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]('modal').open('modal-form-error');
+        }
+      })["catch"](function (error) {
+        new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]('modal').open('modal-form-error');
+      });
+    };
+    form.addEventListener('submit', submit);
+  }
+};
+sendForm();
 
 /***/ }),
 
@@ -2249,8 +2286,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scroll_to_block_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_scroll-to-block.js */ "./src/js/project/_scroll-to-block.js");
 /* harmony import */ var _stream_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_stream.js */ "./src/js/project/_stream.js");
 /* harmony import */ var _hero_animation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_hero-animation.js */ "./src/js/project/_hero-animation.js");
+/* harmony import */ var _sending_form_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_sending-form.js */ "./src/js/project/_sending-form.js");
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_map_inter_map_js__WEBPACK_IMPORTED_MODULE_3__]);
 _map_inter_map_js__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -2472,17 +2511,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   burger: () => (/* binding */ burger)
 /* harmony export */ });
 /* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/index.js */ "./src/js/utils/index.js");
-/* harmony import */ var _project_scroll_to_block_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../project/_scroll-to-block.js */ "./src/js/project/_scroll-to-block.js");
-
 
 var burger = function burger() {
   var burgerButton = document.querySelector('[data-burger-button]');
-  var menu = document.querySelector('[data-menu]');
   var menuLinks = document.querySelectorAll('[data-menu-link]');
   var overlay = document.querySelector('[data-menu-overlay]');
   var buttonsContainer = document.querySelector(".header__account");
   var partner = document.querySelector(".header__partners");
   var header = document.querySelector(".header");
+  var menu = header.querySelector('[data-menu]');
   var keyDownHandler = function keyDownHandler(event) {
     if (event.code === 'Escape') {
       hideBurger();
@@ -2503,7 +2540,7 @@ var burger = function burger() {
   };
   var hideBurger = function hideBurger() {
     burgerButton.classList.remove('burger-button--active');
-    menu.classList.remove('burger-menu--active');
+    menu.classList.remove('menu--active');
     overlay.classList.remove('overlay--active');
     partner.classList.remove('header__partners--hidden');
     buttonsContainer.classList.remove('header__account--active');
@@ -2512,7 +2549,7 @@ var burger = function burger() {
   };
   burgerButton.addEventListener('click', function () {
     burgerButton.classList.toggle('burger-button--active');
-    menu.classList.toggle('burger-menu--active');
+    menu.classList.toggle('menu--active');
     overlay.classList.toggle('overlay--active');
     partner.classList.toggle('header__partners--hidden');
     buttonsContainer.classList.toggle('header__account--active');
@@ -2525,13 +2562,9 @@ var burger = function burger() {
     checkClass();
   });
   menuLinks.forEach(function (link) {
-    link.addEventListener('click', function (e) {
+    link.addEventListener('click', function () {
       hideBurger();
       checkClass();
-      if (link.hasAttribute('data-scroll-home-page')) {
-        e.preventDefault();
-        (0,_project_scroll_to_block_js__WEBPACK_IMPORTED_MODULE_1__.scrollToBlock)(link);
-      }
     });
   });
 };
@@ -2555,10 +2588,10 @@ var stickyHeader = function stickyHeader() {
   var header = document.querySelector('.header');
   var hero = document.querySelector('.hero');
   var heroHeight = hero ? hero.offsetHeight : 500;
-  var burgerMenu = document.querySelector('.burger-menu');
+  var burgerMenu = header.querySelector('.menu');
   if (header) {
     var changeClasses = function changeClasses() {
-      if (!burgerMenu.classList.contains('burger-menu--active')) {
+      if (!burgerMenu.classList.contains('menu--active')) {
         var scrollDistance = window.scrollY;
         if (scrollDistance > heroHeight) {
           header.classList.add('header--fixed');
