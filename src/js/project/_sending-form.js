@@ -2,6 +2,7 @@ import GraphModal from 'graph-modal';
 
 const sendForm = () => {
     const form = document.querySelector('.registration__form')
+    const buttonSubmit = form.querySelector('.registration__button')
 
     if (form) {
 
@@ -24,6 +25,10 @@ const sendForm = () => {
                     new GraphModal('modal').open('modal-form-success');
                     form.querySelector('#registration-email').value = '';
                     form.querySelector('#registration-name').value = ''
+
+                    if (buttonSubmit) {
+                        buttonSubmit.setAttribute('disabled', true)
+                    }
                 } else {
                     new GraphModal('modal').open('modal-form-error');
                 }
