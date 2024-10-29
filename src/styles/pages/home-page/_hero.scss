@@ -4,7 +4,7 @@
 	position: relative;
 	display: flex;
 	padding: 240px 0;
-	height: var(--vh);
+	min-height: var(--vh);
 
 	&__container {
 		display: flex;
@@ -23,7 +23,7 @@
 		width: 100%;
 		max-width: 700px;
 
-    @include mq(lg) {
+		@include mq(lg) {
 			font-size: 60px;
 		}
 	}
